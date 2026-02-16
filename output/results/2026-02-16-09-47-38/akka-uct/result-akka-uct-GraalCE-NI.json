@@ -1,0 +1,232 @@
+{
+  "benchmarks": ["akka-uct"],
+  "format_version": 6,
+  "data": {
+    "akka-uct": {
+      "results": [{
+        "duration_ns": 37701714659,
+        "uptime_ns": 38900630
+      }, {
+        "duration_ns": 34457031003,
+        "uptime_ns": 38426099153
+      }, {
+        "duration_ns": 33104715515,
+        "uptime_ns": 73587007859
+      }, {
+        "duration_ns": 32903049155,
+        "uptime_ns": 107411133325
+      }, {
+        "duration_ns": 32815139857,
+        "uptime_ns": 140824486420
+      }, {
+        "duration_ns": 33960172069,
+        "uptime_ns": 174301600653
+      }, {
+        "duration_ns": 32394508316,
+        "uptime_ns": 208942049886
+      }, {
+        "duration_ns": 33221370880,
+        "uptime_ns": 242003360902
+      }, {
+        "duration_ns": 31803818093,
+        "uptime_ns": 275886635861
+      }, {
+        "duration_ns": 34673986734,
+        "uptime_ns": 308445866948
+      }, {
+        "duration_ns": 33809010882,
+        "uptime_ns": 343855191942
+      }, {
+        "duration_ns": 33835602950,
+        "uptime_ns": 378411905323
+      }, {
+        "duration_ns": 32363883322,
+        "uptime_ns": 413008450531
+      }, {
+        "duration_ns": 34074260838,
+        "uptime_ns": 446122886436
+      }, {
+        "duration_ns": 34731676858,
+        "uptime_ns": 480907917943
+      }, {
+        "duration_ns": 33390457804,
+        "uptime_ns": 516441764753
+      }, {
+        "duration_ns": 34208938556,
+        "uptime_ns": 550571134781
+      }, {
+        "duration_ns": 35298943918,
+        "uptime_ns": 585500542620
+      }, {
+        "duration_ns": 34329448392,
+        "uptime_ns": 621513633688
+      }],
+      "termination": "normal"
+    }
+  },
+  "environment": {
+    "os": {
+      "virt_mem_committed": 70831775744,
+      "name": "Linux",
+      "open_fd_count": 7,
+      "available_processors": 96,
+      "phys_mem_total": 202408706048,
+      "version": "6.1.150-174.273.amzn2023.x86_64",
+      "arch": "amd64",
+      "max_fd_count": 65535,
+      "swap_space_free": 0,
+      "phys_mem_free": 160421097472,
+      "swap_space_total": 0
+    },
+    "vm": {
+      "termination": "normal",
+      "name": "Substrate VM",
+      "classloading": {
+        "class_count": 0,
+        "classes_total": 0
+      },
+      "start_ns": 214081646409538,
+      "mode": "serial gc",
+      "args": ["-Xms12g", "-Xmx12g", "-Dmode=GraalCE-NI"],
+      "vendor": "GraalVM Community",
+      "spec_vendor": "Oracle Corporation",
+      "spec_name": "Java Virtual Machine Specification",
+      "compiler": {
+        "name": "Graal"
+      },
+      "start_iso": "2026-02-14T00:28:03.969Z",
+      "collectors": [{
+        "name": "young generation scavenger",
+        "collection_count": 502,
+        "collection_time_ms": 174344
+      }, {
+        "name": "complete scavenger",
+        "collection_count": 202,
+        "collection_time_ms": 178374
+      }],
+      "start_unix_ms": 1771028883969,
+      "version": "25.0.2+10",
+      "pools": [{
+        "name": "runtime code cache (code and data)",
+        "type": "NON_HEAP",
+        "usage": {
+          "init": -1,
+          "used": 0,
+          "committed": 0,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": -1,
+          "used": 0,
+          "committed": 0,
+          "max": -1
+        }
+      }, {
+        "name": "runtime code cache (native metadata)",
+        "type": "NON_HEAP",
+        "usage": {
+          "init": -1,
+          "used": 0,
+          "committed": 0,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": -1,
+          "used": 0,
+          "committed": 0,
+          "max": -1
+        }
+      }, {
+        "name": "eden space",
+        "type": "HEAP",
+        "usage": {
+          "init": 3221225472,
+          "used": 2836267040,
+          "committed": 2836267040,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": 3221225472,
+          "used": 4335337472,
+          "committed": 4335337472,
+          "max": -1
+        }
+      }, {
+        "name": "survivor space",
+        "type": "HEAP",
+        "usage": {
+          "init": 536870912,
+          "used": 0,
+          "committed": 0,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": 536870912,
+          "used": 111411216,
+          "committed": 111411216,
+          "max": -1
+        }
+      }, {
+        "name": "old generation space",
+        "type": "HEAP",
+        "usage": {
+          "init": 8589934592,
+          "used": 232063008,
+          "committed": 232063008,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": 8589934592,
+          "used": 628686896,
+          "committed": 628686896,
+          "max": -1
+        }
+      }],
+      "uptime_ms": 655846,
+      "compressed_oops_mode": null,
+      "threads": {
+        "thread_count": 295,
+        "thread_count_max": 493,
+        "daemon_thread_count": 98,
+        "threads_total": 37576
+      },
+      "spec_version": "25",
+      "memory": {
+        "heap_usage": {
+          "init": -1,
+          "used": 3068330048,
+          "committed": 4518510656,
+          "max": 12884901888
+        },
+        "nonheap_usage": {
+          "init": -1,
+          "used": 0,
+          "committed": 0,
+          "max": -1
+        },
+        "pending_finalization_count": 0
+      }
+    },
+    "jre": {
+      "java_version": "25.0.2",
+      "name": "GraalVM Runtime Environment",
+      "class_path": [""],
+      "spec_version": "25",
+      "spec_vendor": "Oracle Corporation",
+      "spec_name": "Java Platform API Specification",
+      "home": null,
+      "version": "25.0.2+10-jvmci-b01",
+      "java_vendor": "GraalVM Community",
+      "library_path": []
+    }
+  },
+  "suite": {
+    "git": {
+      "commit_hash": "e294171fdd7c44d73d8463b79d12a2199e276fec",
+      "commit_date": "2025-11-05T16:36:48+0100",
+      "dirty": "false"
+    },
+    "name": "Renaissance Benchmark Suite",
+    "version": "0.16.1"
+  }
+}

@@ -1,0 +1,12 @@
+vm_label,vm_order,vm_jdk,vm,vm_name,vm_version,vm_configuration
+OpenJDK-25,1,25,e1f61a0e,OpenJDK 64-Bit Server VM,25.0.2+10-LTS,-Xms12g -Xmx12g -Dmode=OpenJDK
+GraalCE-25-JIT,2,25,9352e605,OpenJDK 64-Bit Server VM,25.0.2+10-jvmci-b01,-XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:+EnableJVMCI -XX:-UnlockExperimentalVMOptions -Xms12g -Xmx12g -Dmode=GraalCE-JIT -XX:+EnableJVMCI -XX:+UseJVMCICompiler -XX:+UseJVMCINativeLibrary
+GraalEE-25-JIT,3,25,41159e4e,Java HotSpot(TM) 64-Bit Server VM,25.0.2+10-LTS-jvmci-b01,-XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:+EnableJVMCI -XX:-UnlockExperimentalVMOptions -Xms12g -Xmx12g -Dmode=GraalEE-JIT -XX:+EnableJVMCI -XX:+UseJVMCICompiler -XX:+UseJVMCINativeLibrary
+GraalCE-25-NI,4,25,b4fc8de9,Substrate VM,25.0.2+10,-Xms12g -Xmx12g -Dmode=GraalCE-NI
+GraalCE-25-NI-SHEN,5,25,21d9b380,Substrate VM,25-internal-adhoc.ec2user.labs-openjdk,-Xms12g -Xmx12g -Dmode=GraalCE-NI-SHEN -XX:+UnlockDiagnosticVMOptions -XX:ShenandoahGCMode=passive
+GraalEE-25-NI,6,25,6ea42e89,Substrate VM,25.0.2+10-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI
+GraalEE-25-NI-ML,7,25,249b4eaf,Substrate VM,25.0.2+10-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-ML
+GraalEE-25-NI-PGO,8,25,3197a929,Substrate VM,25.0.2+10-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-PGO
+GraalEE-25-NI-G1,9,25,249b9545,Substrate VM,25.0.2+10-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-G1
+GraalEE-25-NI-G1-ML,10,25,8626f6a7,Substrate VM,25.0.2+10-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-G1-ML
+GraalEE-25-NI-G1-PGO,11,25,59d46feb,Substrate VM,25.0.2+10-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-G1-PGO
