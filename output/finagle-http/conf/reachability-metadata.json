@@ -1,0 +1,1297 @@
+{
+  "reflection": [
+    {
+      "type": "com.aayushatharva.brotli4j.Brotli4jLoader"
+    },
+    {
+      "type": "com.fasterxml.jackson.annotation.JsonCreator[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.deser.Deserializers[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.deser.KeyDeserializers[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.deser.ValueInstantiators[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.ext.Java7SupportImpl",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.ser.Serializers[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.module.scala.introspect.PropertyDescriptor[]"
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.BLCHeader$DrainStatusRef",
+      "fields": [
+        {
+          "name": "drainStatus"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueColdProducerFields",
+      "fields": [
+        {
+          "name": "producerLimit"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueConsumerFields",
+      "fields": [
+        {
+          "name": "consumerIndex"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueProducerFields",
+      "fields": [
+        {
+          "name": "producerIndex"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.BoundedLocalCache",
+      "fields": [
+        {
+          "name": "refreshes"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.CacheLoader"
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.FS",
+      "fields": [
+        {
+          "name": "key"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.PS",
+      "fields": [
+        {
+          "name": "key"
+        },
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.PSMS",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.SSSMS",
+      "fields": [
+        {
+          "name": "FACTORY"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.StripedBuffer",
+      "fields": [
+        {
+          "name": "tableBusy"
+        }
+      ]
+    },
+    {
+      "type": "com.github.benmanes.caffeine.cache.WSL",
+      "fields": [
+        {
+          "name": "FACTORY"
+        }
+      ]
+    },
+    {
+      "type": "com.github.luben.zstd.Zstd"
+    },
+    {
+      "type": "com.twitter.finagle.FactoryToService$Enabled"
+    },
+    {
+      "type": "com.twitter.finagle.FixedInetResolver$$anon$1"
+    },
+    {
+      "type": "com.twitter.finagle.client.AddrMetadataExtraction$AddrMetadata"
+    },
+    {
+      "type": "com.twitter.finagle.client.LatencyCompensation$Compensation"
+    },
+    {
+      "type": "com.twitter.finagle.client.LatencyCompensation$Compensator"
+    },
+    {
+      "type": "com.twitter.finagle.client.StatsScoping$Scoper"
+    },
+    {
+      "type": "com.twitter.finagle.client.Transporter$EndpointAddr"
+    },
+    {
+      "type": "com.twitter.finagle.factory.TimeoutFactory$Param"
+    },
+    {
+      "type": "com.twitter.finagle.filter.MaskCancelFilter$Param"
+    },
+    {
+      "type": "com.twitter.finagle.filter.NackAdmissionFilter$Param$Configured"
+    },
+    {
+      "type": "com.twitter.finagle.filter.RequestSemaphoreFilter$Param"
+    },
+    {
+      "type": "com.twitter.finagle.filter.ServerAdmissionControl$Filters"
+    },
+    {
+      "type": "com.twitter.finagle.filter.ServerAdmissionControl$Param"
+    },
+    {
+      "type": "com.twitter.finagle.http.HttpMuxer$RouteMatcher[]"
+    },
+    {
+      "type": "com.twitter.finagle.http.codec.context.HttpContext[]"
+    },
+    {
+      "type": "com.twitter.finagle.http.param.ServerKerberos"
+    },
+    {
+      "type": "com.twitter.finagle.http2.Http2CleartextServerInitializer"
+    },
+    {
+      "type": "com.twitter.finagle.http2.Http2CleartextServerInitializer$MaybeUpgradeHandler"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.client.H2ClientFilter"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.client.Http2ClientEventMapper$"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.client.UpgradeRequestHandler"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.client.UpgradeRequestHandler$$anon$1"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.common.H2StreamChannelInit$H2Initializer"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.common.Http2NackHandler"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.common.Http2StreamMessageHandler$ClientHttp2StreamMessageHandler"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.common.Http2StreamMessageHandler$ServerHttp2StreamMessageHandler"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.common.StripHeadersHandler$"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.server.H2ServerFilter"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.server.H2UriValidatorHandler$"
+    },
+    {
+      "type": "com.twitter.finagle.http2.transport.server.PriorKnowledgeHandler"
+    },
+    {
+      "type": "com.twitter.finagle.liveness.FailureAccrualFactory$Param$Configured"
+    },
+    {
+      "type": "com.twitter.finagle.loadbalancer.LoadBalancerFactory$AddressOrdering"
+    },
+    {
+      "type": "com.twitter.finagle.loadbalancer.LoadBalancerFactory$Dest"
+    },
+    {
+      "type": "com.twitter.finagle.loadbalancer.LoadBalancerFactory$ErrorLabel"
+    },
+    {
+      "type": "com.twitter.finagle.loadbalancer.LoadBalancerFactory$HostStats"
+    },
+    {
+      "type": "com.twitter.finagle.loadbalancer.LoadBalancerFactory$Param"
+    },
+    {
+      "type": "com.twitter.finagle.loadbalancer.aperture.EagerConnectionsType$",
+      "methods": [
+        {
+          "name": "Disable",
+          "parameterTypes": []
+        },
+        {
+          "name": "Enable",
+          "parameterTypes": []
+        },
+        {
+          "name": "ForceWithDtab",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.naming.BindingFactory$BaseDtab"
+    },
+    {
+      "type": "com.twitter.finagle.naming.BindingFactory$Dest"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.FixedNetty4InetResolver$Factory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.netty4.ListeningServerBuilder$$anon$1$$anon$2"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.ListeningServerBuilder$$anon$1$$anon$2$$anon$4"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.Netty4HashedWheelTimer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.netty4.Netty4InetResolver$Factory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.netty4.Netty4Init",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.netty4.channel.ChannelExceptionHandler"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.channel.ChannelRequestStatsHandler"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.channel.ChannelStatsHandler"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.channel.Netty4FramedServerChannelInitializer"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.channel.Netty4RawServerChannelInitializer"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.channel.RawNetty4ClientChannelInitializer"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.channel.ServerBridge"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.http.FinagleHttpObjectAggregator"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.http.handler.BadRequestHandler"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.http.handler.ClientExceptionMapper$"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.http.handler.HeaderValidatorHandler$"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.http.handler.UnpoolHttpHandler$"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.http.handler.UriValidatorHandler$"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.ssl.client.Netty4ClientSslChannelInitializer"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.ssl.server.Netty4ServerSslChannelInitializer"
+    },
+    {
+      "type": "com.twitter.finagle.netty4.transport.ChannelTransport$$anon$2"
+    },
+    {
+      "type": "com.twitter.finagle.param.ExceptionStatsHandler"
+    },
+    {
+      "type": "com.twitter.finagle.param.HighResTimer"
+    },
+    {
+      "type": "com.twitter.finagle.param.Label"
+    },
+    {
+      "type": "com.twitter.finagle.param.MetricBuilders"
+    },
+    {
+      "type": "com.twitter.finagle.param.Monitor"
+    },
+    {
+      "type": "com.twitter.finagle.param.ProtocolLibrary"
+    },
+    {
+      "type": "com.twitter.finagle.param.Reporter"
+    },
+    {
+      "type": "com.twitter.finagle.param.ResponseClassifier"
+    },
+    {
+      "type": "com.twitter.finagle.param.StandardStats"
+    },
+    {
+      "type": "com.twitter.finagle.param.Stats"
+    },
+    {
+      "type": "com.twitter.finagle.param.Timer"
+    },
+    {
+      "type": "com.twitter.finagle.param.Tracer"
+    },
+    {
+      "type": "com.twitter.finagle.service.ExpiringService$Param"
+    },
+    {
+      "type": "com.twitter.finagle.service.FailFastFactory$FailFast"
+    },
+    {
+      "type": "com.twitter.finagle.service.PendingRequestFilter$Param"
+    },
+    {
+      "type": "com.twitter.finagle.service.Retries$Budget"
+    },
+    {
+      "type": "com.twitter.finagle.service.StatsFilter$Now"
+    },
+    {
+      "type": "com.twitter.finagle.service.StatsFilter$Param"
+    },
+    {
+      "type": "com.twitter.finagle.service.TimeoutFilter$PreferDeadlineOverTimeout"
+    },
+    {
+      "type": "com.twitter.finagle.service.TimeoutFilter$PropagateDeadlines"
+    },
+    {
+      "type": "com.twitter.finagle.stats.HostMetricsExporter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.stats.MetricsExporter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.stats.MetricsHostStatsReceiver",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.stats.MetricsStatsReceiver",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.stats.PrometheusExporterHandler",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.toggle.JsonToggleMap$JsonToggle",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "double",
+            "scala.Option",
+            "scala.Option"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.toggle.JsonToggleMap$JsonToggle$",
+      "fields": [
+        {
+          "name": "MODULE$"
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.toggle.JsonToggleMap$JsonToggles",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "scala.collection.immutable.Seq"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.toggle.JsonToggleMap$JsonToggles$",
+      "fields": [
+        {
+          "name": "MODULE$"
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.finagle.transport.Transport$ClientSsl"
+    },
+    {
+      "type": "com.twitter.finagle.transport.Transport$ServerSsl"
+    },
+    {
+      "type": "com.twitter.util.Promise",
+      "fields": [
+        {
+          "name": "state"
+        }
+      ]
+    },
+    {
+      "type": "com.twitter.util.Promise$DetachableFuture",
+      "fields": [
+        {
+          "name": "alreadyDetached"
+        }
+      ]
+    },
+    {
+      "type": "double"
+    },
+    {
+      "type": "int[]"
+    },
+    {
+      "type": "int[][]"
+    },
+    {
+      "type": "io.netty.bootstrap.ServerBootstrap$1"
+    },
+    {
+      "type": "io.netty.bootstrap.ServerBootstrap$ServerBootstrapAcceptor"
+    },
+    {
+      "type": "io.netty.buffer.AbstractByteBufAllocator"
+    },
+    {
+      "type": "io.netty.buffer.AbstractReferenceCountedByteBuf",
+      "fields": [
+        {
+          "name": "refCnt"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.AbstractChannelHandlerContext"
+    },
+    {
+      "type": "io.netty.channel.ChannelException",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.ChannelOutboundBuffer"
+    },
+    {
+      "type": "io.netty.channel.DefaultChannelConfig"
+    },
+    {
+      "type": "io.netty.channel.DefaultChannelPipeline"
+    },
+    {
+      "type": "io.netty.channel.DefaultChannelPipeline$HeadContext"
+    },
+    {
+      "type": "io.netty.channel.DefaultChannelPipeline$TailContext"
+    },
+    {
+      "type": "io.netty.channel.DefaultFileRegion",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "file"
+        },
+        {
+          "name": "transferred"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.epoll.EpollServerSocketChannel",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.epoll.EpollSocketChannel",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.epoll.LinuxSocket",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.epoll.Native",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.epoll.NativeDatagramPacketArray$NativeDatagramPacket",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "count"
+        },
+        {
+          "name": "memoryAddress"
+        },
+        {
+          "name": "recipientAddr"
+        },
+        {
+          "name": "recipientAddrLen"
+        },
+        {
+          "name": "recipientPort"
+        },
+        {
+          "name": "recipientScopeId"
+        },
+        {
+          "name": "segmentSize"
+        },
+        {
+          "name": "senderAddr"
+        },
+        {
+          "name": "senderAddrLen"
+        },
+        {
+          "name": "senderPort"
+        },
+        {
+          "name": "senderScopeId"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.epoll.NativeStaticallyReferencedJniMethods",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.unix.Buffer",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.unix.DatagramSocketAddress",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "byte[]",
+            "int",
+            "int",
+            "int",
+            "io.netty.channel.unix.DatagramSocketAddress"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.unix.DomainDatagramSocketAddress",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "byte[]",
+            "int",
+            "io.netty.channel.unix.DomainDatagramSocketAddress"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.unix.ErrorsStaticallyReferencedJniMethods",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.unix.FileDescriptor",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.unix.LimitsStaticallyReferencedJniMethods",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.channel.unix.PeerCredentials",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "int",
+            "int",
+            "int[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.netty.channel.unix.Socket",
+      "jniAccessible": true
+    },
+    {
+      "type": "io.netty.handler.codec.http.HttpClientCodec"
+    },
+    {
+      "type": "io.netty.handler.codec.http.HttpClientUpgradeHandler"
+    },
+    {
+      "type": "io.netty.handler.codec.http.HttpContentDecompressor"
+    },
+    {
+      "type": "io.netty.handler.codec.http.HttpObjectAggregator"
+    },
+    {
+      "type": "io.netty.handler.codec.http.HttpServerCodec"
+    },
+    {
+      "type": "io.netty.handler.codec.http.HttpServerUpgradeHandler"
+    },
+    {
+      "type": "io.netty.handler.codec.http2.AbstractHttp2StreamChannel"
+    },
+    {
+      "type": "io.netty.handler.codec.http2.Http2FrameCodec"
+    },
+    {
+      "type": "io.netty.handler.codec.http2.Http2MultiplexHandler"
+    },
+    {
+      "type": "io.netty.handler.codec.http2.Http2StreamFrameToHttpObjectCodec"
+    },
+    {
+      "type": "io.netty.util.AbstractReferenceCounted",
+      "fields": [
+        {
+          "name": "refCnt"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.util.DefaultAttributeMap"
+    },
+    {
+      "type": "io.netty.util.DefaultAttributeMap$DefaultAttribute"
+    },
+    {
+      "type": "io.netty.util.HashedWheelTimer"
+    },
+    {
+      "type": "io.netty.util.HashedWheelTimer$HashedWheelTimeout"
+    },
+    {
+      "type": "io.netty.util.ReferenceCountUtil"
+    },
+    {
+      "type": "io.netty.util.concurrent.DefaultPromise"
+    },
+    {
+      "type": "io.netty.util.concurrent.SingleThreadEventExecutor"
+    },
+    {
+      "type": "io.netty.util.internal.NativeLibraryUtil",
+      "methods": [
+        {
+          "name": "loadLibrary",
+          "parameterTypes": [
+            "java.lang.String",
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueColdProducerFields",
+      "fields": [
+        {
+          "name": "producerLimit"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueConsumerFields",
+      "fields": [
+        {
+          "name": "consumerIndex"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueProducerFields",
+      "fields": [
+        {
+          "name": "producerIndex"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueConsumerIndexField",
+      "fields": [
+        {
+          "name": "consumerIndex"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerIndexField",
+      "fields": [
+        {
+          "name": "producerIndex"
+        }
+      ]
+    },
+    {
+      "type": "io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerLimitField",
+      "fields": [
+        {
+          "name": "producerLimit"
+        }
+      ]
+    },
+    {
+      "type": "java.io.FileDescriptor",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "fd"
+        }
+      ]
+    },
+    {
+      "type": "java.io.IOException",
+      "jniAccessible": true
+    },
+    {
+      "type": "java.io.Serializable"
+    },
+    {
+      "type": "java.lang.Boolean",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ClassValue"
+    },
+    {
+      "type": "java.lang.Object"
+    },
+    {
+      "type": "java.lang.OutOfMemoryError",
+      "jniAccessible": true
+    },
+    {
+      "type": "java.lang.ProcessHandle",
+      "methods": [
+        {
+          "name": "current",
+          "parameterTypes": []
+        },
+        {
+          "name": "pid",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.RuntimeException",
+      "jniAccessible": true
+    },
+    {
+      "type": "java.lang.StackTraceElement[]"
+    },
+    {
+      "type": "java.lang.String"
+    },
+    {
+      "type": "java.lang.String[]"
+    },
+    {
+      "type": "java.lang.String[][]"
+    },
+    {
+      "type": "java.lang.invoke.VarHandle",
+      "methods": [
+        {
+          "name": "releaseFence",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.reflect.Constructor[]"
+    },
+    {
+      "type": "java.lang.reflect.Field[]"
+    },
+    {
+      "type": "java.net.InetSocketAddress",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "int"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.net.PortUnreachableException",
+      "jniAccessible": true
+    },
+    {
+      "type": "java.net.URL[]"
+    },
+    {
+      "type": "java.nio.Bits"
+    },
+    {
+      "type": "java.nio.Buffer",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "address"
+        },
+        {
+          "name": "limit"
+        },
+        {
+          "name": "position"
+        }
+      ],
+      "methods": [
+        {
+          "name": "limit",
+          "parameterTypes": []
+        },
+        {
+          "name": "position",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.nio.ByteBuffer"
+    },
+    {
+      "type": "java.nio.DirectByteBuffer"
+    },
+    {
+      "type": "java.nio.channels.ClosedChannelException",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.nio.channels.FileChannel"
+    },
+    {
+      "type": "jdk.internal.misc.Unsafe",
+      "methods": [
+        {
+          "name": "getUnsafe",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.osgi.framework.BundleEvent"
+    },
+    {
+      "type": "org.renaissance.twitter.finagle.FinagleHttp",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.slf4j.simple.SimpleServiceProvider"
+    },
+    {
+      "type": "scala.Enumeration"
+    },
+    {
+      "type": "scala.Equals"
+    },
+    {
+      "type": "scala.Product"
+    },
+    {
+      "type": "scala.Tuple2[]"
+    },
+    {
+      "type": "scala.Tuple3[]"
+    },
+    {
+      "type": "scala.Tuple4[]"
+    },
+    {
+      "type": "scala.collection.concurrent.INodeBase"
+    },
+    {
+      "type": "spray.json.JsValue[]"
+    },
+    {
+      "type": "sun.management.ManagementFactoryHelper",
+      "fields": [
+        {
+          "name": "jvm"
+        }
+      ],
+      "methods": [
+        {
+          "name": "getHotspotRuntimeMBean",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.management.VMManagementImpl",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "compTimeMonitoringSupport"
+        },
+        {
+          "name": "currentThreadCpuTimeSupport"
+        },
+        {
+          "name": "objectMonitorUsageSupport"
+        },
+        {
+          "name": "otherThreadCpuTimeSupport"
+        },
+        {
+          "name": "remoteDiagnosticCommandsSupport"
+        },
+        {
+          "name": "synchronizerUsageSupport"
+        },
+        {
+          "name": "threadAllocatedMemorySupport"
+        },
+        {
+          "name": "threadContentionMonitoringSupport"
+        }
+      ],
+      "methods": [
+        {
+          "name": "getInternalCounters",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.management.counter.AbstractCounter",
+      "methods": [
+        {
+          "name": "getName",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.management.counter.perf.PerfLongCounter",
+      "methods": [
+        {
+          "name": "getValue",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.management.counter.perf.PerfStringCounter"
+    },
+    {
+      "type": "sun.misc.Unsafe",
+      "fields": [
+        {
+          "name": "theUnsafe"
+        }
+      ],
+      "methods": [
+        {
+          "name": "invokeCleaner",
+          "parameterTypes": [
+            "java.nio.ByteBuffer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.nio.ch.FileChannelImpl",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "fd"
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.NativePRNG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.FormatData"
+    },
+    {
+      "type": "sun.text.resources.FormatData_en"
+    },
+    {
+      "type": "sun.text.resources.JavaTimeSupplementary"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en_US"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/MANIFEST.MF"
+    },
+    {
+      "glob": "META-INF/native/libnetty_transport_native_epoll_x86_64.so"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.ClientParamsInjector"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.ClientStackTransformer"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.FinagleInit"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.FixedInetResolver$Factory"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.InetResolver$Factory"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.Resolver"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.ServerParamsInjector"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.ServerStackTransformer"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.exp.FinagleSchedulerService"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.http.HttpMuxHandler"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.http.codec.context.LoadableHttpContext"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.stats.HostStatsReceiver"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.stats.StatsReceiver"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.toggle.ServiceLoadedToggleMap"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.tracing.Tracer"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.util.ReporterFactory"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.finagle.util.ServiceLoadedTimer"
+    },
+    {
+      "glob": "META-INF/services/com.twitter.util.tunable.ServiceLoadedTunableMap"
+    },
+    {
+      "glob": "META-INF/services/java.net.spi.InetAddressResolverProvider"
+    },
+    {
+      "glob": "META-INF/services/java.nio.channels.spi.SelectorProvider"
+    },
+    {
+      "glob": "META-INF/services/org.slf4j.spi.SLF4JServiceProvider"
+    },
+    {
+      "glob": "benchmarks.properties"
+    },
+    {
+      "glob": "com/fasterxml/jackson/module/scala/build.properties"
+    },
+    {
+      "glob": "com/twitter/finagle-core/build.properties"
+    },
+    {
+      "glob": "com/twitter/finagle-core_2.12/build.properties"
+    },
+    {
+      "glob": "com/twitter/finagle-core_2.13/build.properties"
+    },
+    {
+      "glob": "com/twitter/finagle/toggle/JsonToggleMap$JsonToggle.class"
+    },
+    {
+      "glob": "com/twitter/finagle/toggle/JsonToggleMap$JsonToggles.class"
+    },
+    {
+      "glob": "com/twitter/toggles/configs/com.twitter.finagle.core-service.json"
+    },
+    {
+      "glob": "com/twitter/toggles/configs/com.twitter.finagle.core.json"
+    },
+    {
+      "glob": "com/twitter/toggles/configs/com.twitter.finagle.netty4-service.json"
+    },
+    {
+      "glob": "com/twitter/toggles/configs/com.twitter.finagle.netty4.json"
+    },
+    {
+      "glob": "com/twitter/toggles/configs/com.twitter.finagle.stats-service.json"
+    },
+    {
+      "glob": "com/twitter/toggles/configs/com.twitter.finagle.stats.json"
+    },
+    {
+      "glob": "com/twitter/tunables/finagle/instances.json"
+    },
+    {
+      "glob": "linux/amd64/libzstd-jni-1.5.6-7.so"
+    },
+    {
+      "glob": "simplelogger.properties"
+    }
+  ]
+}

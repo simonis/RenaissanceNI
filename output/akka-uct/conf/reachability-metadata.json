@@ -1,0 +1,621 @@
+{
+  "reflection": [
+    {
+      "type": "akka.actor.ActorCell",
+      "fields": [
+        {
+          "name": "akka$actor$dungeon$Children$$_childrenRefsDoNotCallMeDirectly"
+        },
+        {
+          "name": "akka$actor$dungeon$Children$$_functionRefsDoNotCallMeDirectly"
+        },
+        {
+          "name": "akka$actor$dungeon$Children$$_nextNameDoNotCallMeDirectly"
+        },
+        {
+          "name": "akka$actor$dungeon$Dispatch$$_mailboxDoNotCallMeDirectly"
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.ActorSystemImpl",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.Address",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.CoordinatedShutdown",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.CoordinatedShutdown$$anon$1",
+      "fields": [
+        {
+          "name": "0bitmap$3"
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.CoordinatedShutdown$tasks$",
+      "fields": [
+        {
+          "name": "0bitmap$2"
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.DefaultSupervisorStrategy",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.LightArrayRevolverScheduler",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "com.typesafe.config.Config",
+            "akka.event.LoggingAdapter",
+            "java.util.concurrent.ThreadFactory"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.LightArrayRevolverScheduler$TaskHolder",
+      "fields": [
+        {
+          "name": "task"
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.LightArrayRevolverScheduler$TaskQueue[]"
+    },
+    {
+      "type": "akka.actor.LocalActorRefProvider",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "akka.actor.ActorSystem$Settings",
+            "akka.event.EventStream",
+            "akka.actor.DynamicAccess"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.LocalActorRefProvider$Guardian",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.SupervisorStrategy"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.LocalActorRefProvider$SystemGuardian",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.SupervisorStrategy",
+            "akka.actor.ActorRef"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.actor.Props$EmptyActor"
+    },
+    {
+      "type": "akka.actor.RepointableActorRef",
+      "fields": [
+        {
+          "name": "_cellDoNotCallMeDirectly"
+        },
+        {
+          "name": "_lookupDoNotCallMeDirectly"
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.AbstractNodeQueue",
+      "fields": [
+        {
+          "name": "_tailDoNotCallMeDirectly"
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.AbstractNodeQueue$Node",
+      "fields": [
+        {
+          "name": "_nextDoNotCallMeDirectly"
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.BoundedControlAwareMessageQueueSemantics"
+    },
+    {
+      "type": "akka.dispatch.BoundedDequeBasedMessageQueueSemantics"
+    },
+    {
+      "type": "akka.dispatch.BoundedMessageQueueSemantics"
+    },
+    {
+      "type": "akka.dispatch.ControlAwareMessageQueueSemantics"
+    },
+    {
+      "type": "akka.dispatch.DequeBasedMessageQueueSemantics"
+    },
+    {
+      "type": "akka.dispatch.Dispatcher"
+    },
+    {
+      "type": "akka.dispatch.Dispatcher$LazyExecutorServiceDelegate",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.Mailbox",
+      "fields": [
+        {
+          "name": "_statusDoNotCallMeDirectly"
+        },
+        {
+          "name": "_systemQueueDoNotCallMeDirectly"
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.MessageDispatcher",
+      "fields": [
+        {
+          "name": "_inhabitantsDoNotCallMeDirectly"
+        },
+        {
+          "name": "_shutdownScheduleDoNotCallMeDirectly"
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.MessageDispatcher$",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.MultipleConsumerSemantics"
+    },
+    {
+      "type": "akka.dispatch.SingleConsumerOnlyUnboundedMailbox",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ActorSystem$Settings",
+            "com.typesafe.config.Config"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.dispatch.UnboundedControlAwareMessageQueueSemantics"
+    },
+    {
+      "type": "akka.dispatch.UnboundedDequeBasedMessageQueueSemantics"
+    },
+    {
+      "type": "akka.dispatch.UnboundedMessageQueueSemantics"
+    },
+    {
+      "type": "akka.event.DefaultLoggingFilter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ActorSystem$Settings",
+            "akka.event.EventStream"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.event.EventStream",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "akka.event.EventStreamUnsubscriber",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.event.EventStream",
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.event.LoggerMailboxType",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ActorSystem$Settings",
+            "com.typesafe.config.Config"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.event.LoggerMessageQueueSemantics"
+    },
+    {
+      "type": "akka.event.Logging$DefaultLogger",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "akka.pattern.PromiseActorRef",
+      "fields": [
+        {
+          "name": "_stateDoNotCallMeDirectly"
+        },
+        {
+          "name": "_watchedByDoNotCallMeDirectly"
+        }
+      ]
+    },
+    {
+      "type": "akka.routing.ConsistentHashingPool",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "com.typesafe.config.Config"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.routing.RoundRobinPool",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "com.typesafe.config.Config"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.BooleanSerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ExtendedActorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.ByteArraySerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ExtendedActorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.ByteStringSerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ExtendedActorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.DisabledJavaSerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ExtendedActorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.IntSerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ExtendedActorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.LongSerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ExtendedActorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.SerializationExtension$",
+      "fields": [
+        {
+          "name": "MODULE$"
+        }
+      ]
+    },
+    {
+      "type": "akka.serialization.StringSerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "akka.actor.ExtendedActorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "akka.util.ByteString$ByteString1"
+    },
+    {
+      "type": "akka.util.ByteString$ByteString1C"
+    },
+    {
+      "type": "akka.util.ByteString$ByteStrings"
+    },
+    {
+      "type": "akka.util.Collections$PartialImmutableValuesIterable",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "byte[]"
+    },
+    {
+      "type": "java.io.Serializable"
+    },
+    {
+      "type": "java.lang.Boolean",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ClassValue"
+    },
+    {
+      "type": "java.lang.Class[]"
+    },
+    {
+      "type": "java.lang.Integer"
+    },
+    {
+      "type": "java.lang.Long"
+    },
+    {
+      "type": "java.lang.Object[]"
+    },
+    {
+      "type": "java.lang.String",
+      "fields": [
+        {
+          "name": "value"
+        }
+      ]
+    },
+    {
+      "type": "java.lang.String[]"
+    },
+    {
+      "type": "java.lang.invoke.VarHandle",
+      "methods": [
+        {
+          "name": "releaseFence",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.renaissance.actors.AkkaUct",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "scala.Boolean"
+    },
+    {
+      "type": "scala.Int"
+    },
+    {
+      "type": "scala.Long"
+    },
+    {
+      "type": "scopt.OptionParser",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "spray.json.DefaultJsonProtocol$",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "spray.json.JsValue[]"
+    },
+    {
+      "type": "sun.management.VMManagementImpl",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "compTimeMonitoringSupport"
+        },
+        {
+          "name": "currentThreadCpuTimeSupport"
+        },
+        {
+          "name": "objectMonitorUsageSupport"
+        },
+        {
+          "name": "otherThreadCpuTimeSupport"
+        },
+        {
+          "name": "remoteDiagnosticCommandsSupport"
+        },
+        {
+          "name": "synchronizerUsageSupport"
+        },
+        {
+          "name": "threadAllocatedMemorySupport"
+        },
+        {
+          "name": "threadContentionMonitoringSupport"
+        }
+      ]
+    },
+    {
+      "type": "sun.misc.Unsafe",
+      "fields": [
+        {
+          "name": "theUnsafe"
+        }
+      ]
+    },
+    {
+      "type": "sun.reflect.Reflection"
+    },
+    {
+      "type": "sun.security.provider.NativePRNG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/MANIFEST.MF"
+    },
+    {
+      "glob": "benchmarks.properties"
+    },
+    {
+      "glob": "library.properties"
+    },
+    {
+      "glob": "reference.conf"
+    },
+    {
+      "glob": "version.conf"
+    },
+    {
+      "glob": "version.json"
+    },
+    {
+      "glob": "version.properties"
+    },
+    {
+      "module": "java.base",
+      "glob": "sun/net/www/content-types.properties"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "reflection": [
+    {
+      "type": "java.lang.Boolean",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ClassValue"
+    },
+    {
+      "type": "java.lang.String[]"
+    },
+    {
+      "type": "java.lang.invoke.VarHandle",
+      "methods": [
+        {
+          "name": "releaseFence",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.renaissance.scala.stm.Philosophers",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.renaissance.scala.stm.RealityShowPhilosophers$Fork[]"
+    },
+    {
+      "type": "org.renaissance.scala.stm.RealityShowPhilosophers$PhilosopherThread[]"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTM",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$BooleanRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$ByteRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$CharRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$DoubleRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$FloatRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$GenericRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$IntRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$LongRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.CCSTMRefs$ShortRef"
+    },
+    {
+      "type": "scala.concurrent.stm.ccstm.TxnLevelImpl"
+    },
+    {
+      "type": "scala.concurrent.stm.impl.DefaultFactory"
+    },
+    {
+      "type": "scopt.OptionParser",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "spray.json.DefaultJsonProtocol$",
+      "fields": [
+        {
+          "name": "0bitmap$1"
+        }
+      ]
+    },
+    {
+      "type": "spray.json.JsValue[]"
+    },
+    {
+      "type": "sun.management.VMManagementImpl",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "compTimeMonitoringSupport"
+        },
+        {
+          "name": "currentThreadCpuTimeSupport"
+        },
+        {
+          "name": "objectMonitorUsageSupport"
+        },
+        {
+          "name": "otherThreadCpuTimeSupport"
+        },
+        {
+          "name": "remoteDiagnosticCommandsSupport"
+        },
+        {
+          "name": "synchronizerUsageSupport"
+        },
+        {
+          "name": "threadAllocatedMemorySupport"
+        },
+        {
+          "name": "threadContentionMonitoringSupport"
+        }
+      ]
+    },
+    {
+      "type": "sun.misc.Unsafe",
+      "fields": [
+        {
+          "name": "theUnsafe"
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.NativePRNG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/MANIFEST.MF"
+    },
+    {
+      "glob": "benchmarks.properties"
+    }
+  ]
+}

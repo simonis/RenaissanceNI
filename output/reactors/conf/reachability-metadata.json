@@ -1,0 +1,315 @@
+{
+  "reflection": [
+    {
+      "type": "boolean[]"
+    },
+    {
+      "type": "byte[]"
+    },
+    {
+      "type": "char[]"
+    },
+    {
+      "type": "double[]"
+    },
+    {
+      "type": "float[]"
+    },
+    {
+      "type": "int[]"
+    },
+    {
+      "type": "io.reactors.ChannelBuilder[]"
+    },
+    {
+      "type": "io.reactors.Channel[]"
+    },
+    {
+      "type": "io.reactors.Channel[][]"
+    },
+    {
+      "type": "io.reactors.Connector[]"
+    },
+    {
+      "type": "io.reactors.DefaultErrorHandler",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.Remote",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.SysEvent[]"
+    },
+    {
+      "type": "io.reactors.concurrent.AnonymousReactor",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "scala.Function1"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.debugger.ZeroDebugApi",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.marshal.ClassDescriptor[]"
+    },
+    {
+      "type": "io.reactors.pickle.JavaSerializationPickler",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.services.Channels",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.services.Clock",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.services.Debugger",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.services.Io",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.services.Log",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.services.Names",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.services.Net",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.reactors.transport.LocalTransport",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "io.reactors.ReactorSystem"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Boolean",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Class[]"
+    },
+    {
+      "type": "java.lang.Object[]"
+    },
+    {
+      "type": "java.lang.String[]"
+    },
+    {
+      "type": "java.lang.invoke.VarHandle",
+      "methods": [
+        {
+          "name": "releaseFence",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.reflect.Constructor[]"
+    },
+    {
+      "type": "long[]"
+    },
+    {
+      "type": "org.renaissance.actors.BigBench$Cmd[]"
+    },
+    {
+      "type": "org.renaissance.actors.CountingActor$Cmd[]"
+    },
+    {
+      "type": "org.renaissance.actors.Reactors",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "scala.collection.concurrent.CNodeBase"
+    },
+    {
+      "type": "scala.collection.concurrent.INodeBase"
+    },
+    {
+      "type": "scala.collection.concurrent.MainNode"
+    },
+    {
+      "type": "scala.collection.concurrent.TrieMap"
+    },
+    {
+      "type": "scala.runtime.BoxedUnit[]"
+    },
+    {
+      "type": "short[]"
+    },
+    {
+      "type": "spray.json.JsValue[]"
+    },
+    {
+      "type": "sun.management.VMManagementImpl",
+      "jniAccessible": true,
+      "fields": [
+        {
+          "name": "compTimeMonitoringSupport"
+        },
+        {
+          "name": "currentThreadCpuTimeSupport"
+        },
+        {
+          "name": "objectMonitorUsageSupport"
+        },
+        {
+          "name": "otherThreadCpuTimeSupport"
+        },
+        {
+          "name": "remoteDiagnosticCommandsSupport"
+        },
+        {
+          "name": "synchronizerUsageSupport"
+        },
+        {
+          "name": "threadAllocatedMemorySupport"
+        },
+        {
+          "name": "threadContentionMonitoringSupport"
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.NativePRNG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/MANIFEST.MF"
+    },
+    {
+      "glob": "benchmarks.properties"
+    }
+  ]
+}
