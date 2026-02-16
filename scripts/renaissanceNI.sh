@@ -71,6 +71,32 @@ benchmarks=(
   "scala-stm-bench7"
   "scrabble"
 )
+
+if [[ -v BENCHMARKS ]]; then
+  IFS=',' read -r -a benchmarks_to_execute <<< ${BENCHMARKS}
+  # Strip whitespace
+  benchmarks_to_execute=("${benchmarks_to_execute[@]#[[:space:]]}")
+  benchmarks_to_execute=("${benchmarks_to_execute[@]%[[:space:]]}")
+else
+  benchmarks_to_execute=("${benchmarks[@]}")
+fi
+
+# Checks if an array contains a specific value
+# $1: the needle to search for
+# $2, .., $n: the elements of the array
+#
+# Example: if contains_element "needle" "${my_array[@]}"; then
+contains_element() {
+  # Declare local variable 'e' and 'match' and save the first argument (i.e. the needle) in 'match'
+  local e match="$1"
+  # remove the first argument from the argument list
+  shift
+  # Iterate over the remaining arguments and return '0' (bash's status code for success) on a match
+  for e; do [[ "$e" == "$match" ]] && return 0; done
+  # No match found
+  return 1
+}
+
 # Contains special command line options for compiling the benchmarks to native images and must have the
 # sime size like the 'benchmarks' array above.
 # See: https://github.com/oracle/graal/blob/c65b0fac/substratevm/mx.substratevm/mx_substratevm_benchmark.py#L69-L148
@@ -164,7 +190,12 @@ for b in ${!benchmarks[@]}; do
   benchmark=${benchmarks[$b]}
   benchmark_jar="${RENAISSANCE_SINGLE}/${benchmark}.jar"
 
-  echo "=== ${benchmark} ==="
+  if contains_element "${benchmark}" "${benchmarks_to_execute[@]}"; then
+    echo "=== Executing ${benchmark} ==="
+  else
+    echo "=== Skipping ${benchmark} because BENCHMARKS was given and doeosn't contain ${benchmark} ==="
+    continue
+  fi
 
   if [[ ! -e ${OUTPUT}/results/${DATE}/${benchmark} ]]; then
     echo_and_exec mkdir -p ${OUTPUT}/results/${DATE}/${benchmark}
@@ -183,6 +214,13 @@ for b in ${!benchmarks[@]}; do
       DOTTY_ARGS=
     fi
 
+    if [[ ${benchmark} =~ "finagle-chirper" ]]; then
+      # 'finagle-chirper' needs special runtime arguments if run on machines with many CPUs
+      FINAGLE_CHIRPER_ARGS="${FINAGLE_CHIRPER_MAX_CPUS}"
+    else
+      FINAGLE_CHIRPER_ARGS=
+    fi
+
     if [[ ${modes[$m]} =~ "NI" ]]; then
 
       # For Native Image modes we have to do some preparations...
@@ -196,7 +234,7 @@ for b in ${!benchmarks[@]}; do
 
         # Now run the instrumented binary to create the profile
         if [[ -v REBUILD_NI || ! -e ${OUTPUT}/${benchmark}/${benchmark}-${modes[$m]}.iprof ]]; then
-          echo_and_exec ${OUTPUT}/${benchmark}/${benchmark}-${modes[$m]}.pgo -XX:ProfilesDumpFile=${OUTPUT}/${benchmark}/${benchmark}-${modes[$m]}.iprof ${JAVA_ARGS} -Dmode=${modes[$m]} ${jdk_runtime_opts[$m]} ${DOTTY_ARGS} --json /dev/null -t 60 ${benchmark}
+          echo_and_exec ${OUTPUT}/${benchmark}/${benchmark}-${modes[$m]}.pgo -XX:ProfilesDumpFile=${OUTPUT}/${benchmark}/${benchmark}-${modes[$m]}.iprof ${JAVA_ARGS} ${FINAGLE_CHIRPER_ARGS} -Dmode=${modes[$m]} ${jdk_runtime_opts[$m]} ${DOTTY_ARGS} --json /dev/null -t 60 ${benchmark}
         fi
 
         # Create the native image based on the PGO profile if it doesn't exist already
@@ -213,12 +251,12 @@ for b in ${!benchmarks[@]}; do
       fi
 
       # And finally run the benchmark as Native Image
-      echo_and_exec ${OUTPUT}/${benchmark}/${benchmark}-${modes[$m]} ${JAVA_ARGS} -Dmode=${modes[$m]} ${jdk_runtime_opts[$m]} ${DOTTY_ARGS} --json ${OUTPUT}/results/${DATE}/${benchmark}/result-${benchmark}-${modes[$m]}.json -t ${BENCH_TIME} ${benchmark}
+      echo_and_exec ${OUTPUT}/${benchmark}/${benchmark}-${modes[$m]} ${JAVA_ARGS} ${FINAGLE_CHIRPER_ARGS} -Dmode=${modes[$m]} ${jdk_runtime_opts[$m]} ${DOTTY_ARGS} --json ${OUTPUT}/results/${DATE}/${benchmark}/result-${benchmark}-${modes[$m]}.json -t ${BENCH_TIME} ${benchmark}
 
     else # [[ ${modes[$m]} =~ "NI" ]]
 
       # For plain Java modes, just run the benchmarks
-      echo_and_exec ${jdk}/bin/java ${JAVA_ARGS} -Dmode=${modes[$m]} ${jdk_runtime_opts[$m]} -jar ${benchmark_jar} --json ${OUTPUT}/results/${DATE}/${benchmark}/result-${benchmark}-${modes[$m]}.json -t ${BENCH_TIME} ${benchmark}
+      echo_and_exec ${jdk}/bin/java ${JAVA_ARGS} ${FINAGLE_CHIRPER_ARGS} -Dmode=${modes[$m]} ${jdk_runtime_opts[$m]} -jar ${benchmark_jar} --json ${OUTPUT}/results/${DATE}/${benchmark}/result-${benchmark}-${modes[$m]}.json -t ${BENCH_TIME} ${benchmark}
     fi
   done
 done
