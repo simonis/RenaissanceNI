@@ -22,6 +22,9 @@ if [[ ! -v SHENANDOAH_HOME ]]; then
   echo "You need to define SHENANDOAH_HOME"
   exit 1
 fi
+
+export LD_LIBRARY_PATH=${SHENANDOAH_HOME}
+
 if [[ ! -v RENAISSANCE_SINGLE ]]; then
   echo "You need to define RENAISSANCE_SINGLE"
   exit 1
