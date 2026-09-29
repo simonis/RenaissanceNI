@@ -2,8 +2,12 @@
 
 MYPATH=$(dirname $(realpath -s $0))
 
-if [[ ! -v OPENJDK_HOME ]]; then
-  echo "You need to define OPENJDK_HOME"
+if [[ ! -v OPENJDK_25_HOME ]]; then
+  echo "You need to define OPENJDK_25_HOME"
+  exit 1
+fi
+if [[ ! -v OPENJDK_LATESST_HOME ]]; then
+  echo "You need to define OPENJDK_LATEST_HOME"
   exit 1
 fi
 if [[ ! -v GRAALCE_HOME ]]; then
@@ -14,16 +18,16 @@ if [[ ! -v GRAALEE_HOME ]]; then
   echo "You need to define GRAALEE_HOME"
   exit 1
 fi
-if [[ ! -v GRAALCE_SHEN_HOME ]]; then
-  echo "You need to define GRAALCE_SHEN_HOME"
-  exit 1
-fi
-if [[ ! -v SHENANDOAH_HOME ]]; then
-  echo "You need to define SHENANDOAH_HOME"
-  exit 1
-fi
-
-export LD_LIBRARY_PATH=${SHENANDOAH_HOME}
+#if [[ ! -v GRAALCE_SHEN_HOME ]]; then
+#  echo "You need to define GRAALCE_SHEN_HOME"
+#  exit 1
+#fi
+#if [[ ! -v SHENANDOAH_HOME ]]; then
+#  echo "You need to define SHENANDOAH_HOME"
+#  exit 1
+#fi
+#
+#export LD_LIBRARY_PATH=${SHENANDOAH_HOME}
 
 if [[ ! -v RENAISSANCE_SINGLE ]]; then
   echo "You need to define RENAISSANCE_SINGLE"
@@ -124,14 +128,18 @@ ni_opts=(
 
 # The different Native Image flavours we want to build
 modes=(
-  "OpenJDK"
+  "OpenJDK-25"
+  "OpenJDK-LATEST"
   "GraalCE-JIT"
-  "GraalCE-NI"
-  "GraalCE-NI-SHEN"
+  "GraalCE-NI-SERIAL"
+  "GraalCE-NI-G1"
+  "GraalCE-NI-SHEN-PASSIVE"
+  "GraalCE-NI-SHEN-SATB"
+  "GraalCE-NI-SHEN-GEN"
   "GraalEE-JIT"
-  "GraalEE-NI"
-  "GraalEE-NI-ML"
-  "GraalEE-NI-PGO"
+  "GraalEE-NI-SERIAL"
+  "GraalEE-NI-SERIAL-ML"
+  "GraalEE-NI-SERIAL-PGO"
   "GraalEE-NI-G1"
   "GraalEE-NI-G1-ML"
   "GraalEE-NI-G1-PGO"
@@ -139,47 +147,59 @@ modes=(
 
 # The GraalVM which corresponds to each 'mode' above (this array must have the sime size as 'modes' above)
 jdks=(
-  ${OPENJDK_HOME}
-  ${GRAALCE_HOME}
-  ${GRAALCE_HOME}
-  ${GRAALCE_SHEN_HOME}
-  ${GRAALEE_HOME}
-  ${GRAALEE_HOME}
-  ${GRAALEE_HOME}
-  ${GRAALEE_HOME}
-  ${GRAALEE_HOME}
-  ${GRAALEE_HOME}
-  ${GRAALEE_HOME}
+  ${OPENJDK_25_HOME} # OpenJDK-25
+  ${OPENJDK_LATEST_HOME} # OpenJDK-LATEST
+  ${GRAALCE_HOME} # GraalCE-JIT
+  ${GRAALCE_HOME} # GraalCE-NI-SERIAL
+  ${GRAALCE_HOME} # GraalCE-NI-G1
+  ${GRAALCE_HOME} # GraalCE-NI-SHEN-PASSIVE
+  ${GRAALCE_HOME} # GraalCE-NI-SHEN-SATB
+  ${GRAALCE_HOME} # GraalCE-NI-SHEN-GEN
+  ${GRAALEE_HOME} # GraalEE-JIT
+  ${GRAALEE_HOME} # GraalEE-NI-SERIAL
+  ${GRAALEE_HOME} # GraalEE-NI-SERIAL-ML
+  ${GRAALEE_HOME} # GraalEE-NI-SERIAL-PGO
+  ${GRAALEE_HOME} # GraalEE-NI-G1
+  ${GRAALEE_HOME} # GraalEE-NI-ML
+  ${GRAALEE_HOME} # GraalEE-NI-G1-PGO
 )
 
 # Special native-image build options for each 'mode' above (this array must have the sime size as 'modes' above)
 jdk_ni_opts=(
-  "" # OpenJDK
-  "" # GraalCE-JIT
-  "" # GraalCE-NI
-  "--native-compiler-options=-L${SHENANDOAH_HOME} --native-compiler-options=-Wl,--unresolved-symbols=ignore-all --gc=shenandoah -H:ShenandoahDebugLevel=product" # GraalCE-NI-SHEN
-  "" # GraalEE-JIT
-  "-H:-MLProfileInference" # GraalEE-NI
-  "" # GraalEE-NI-ML
-  "" # GraalEE-NI-PGO
-  "--gc=G1 -H:-MLProfileInference" # GraalEE-NI-G1
-  "--gc=G1" # GraalEE-NI-ML
-  "--gc=G1" # GraalEE-NI-G1-PGO
+  ""                                                                          # OpenJDK-25
+  ""                                                                          # OpenJDK-LATEST
+  ""                                                                          # GraalCE-JIT
+  "--gc=serial"                                                               # GraalCE-NI-SERIAL
+  "--gc=G1"                                                                   # GraalCE-NI-G1
+  "--gc=shenandoah -H:ShenandoahGCMode=passive -R:+UnlockDiagnosticVMOptions" # GraalCE-NI-SHEN-PASSIVE
+  "--gc=shenandoah -H:ShenandoahGCMode=satb"                                  # GraalCE-NI-SHEN-SATB
+  "--gc=shenandoah -H:ShenandoahGCMode=generational"                          # GraalCE-NI-SHEN-GEN
+  ""                                                                          # GraalEE-JIT
+  "--gc=serial -H:-MLProfileInference"                                        # GraalEE-NI-SERIAL
+  "--gc=serial -H:+MLProfileInference"                                        # GraalEE-NI-SERIAL-ML
+  "--gc=serial"                                                               # GraalEE-NI-SERIAL-PGO
+  "--gc=G1 -H:-MLProfileInference"                                            # GraalEE-NI-G1
+  "--gc=G1 -H:-MLProfileInference"                                            # GraalEE-NI-ML
+  "--gc=G1"                                                                   # GraalEE-NI-G1-PGO
 )
 
 # Special native-image runtime options for each 'mode' above (this array must have the sime size as 'modes' above)
 jdk_runtime_opts=(
-  "" # OpenJDK
+  ""                                                                  # OpenJDK-25
+  ""                                                                  # OpenJDK-LATEST
   "-XX:+EnableJVMCI -XX:+UseJVMCICompiler -XX:+UseJVMCINativeLibrary" # GraalCE-JIT
-  "" # GraalCE-NI
-  "-XX:+UnlockDiagnosticVMOptions -XX:ShenandoahGCMode=passive" # GraalCE-NI-SHEN
+  ""                                                                  # GraalCE-NI-SERIAL
+  ""                                                                  # GraalCE-NI-G1
+  ""                                                                  # GraalCE-NI-SHEN-PASSIVE
+  ""                                                                  # GraalCE-NI-SHEN-SATB
+  ""                                                                  # GraalCE-NI-SHEN-GEN
   "-XX:+EnableJVMCI -XX:+UseJVMCICompiler -XX:+UseJVMCINativeLibrary" # GraalEE-JIT
-  "" # GraalEE-NI
-  "" # GraalEE-NI-ML
-  "" # GraalEE-NI-PGO
-  "" # GraalEE-NI-G1
-  "" # GraalEE-NI-G1-ML
-  "" # GraalEE-NI-G1-PGO
+  ""                                                                  # GraalEE-NI-SERIAL
+  ""                                                                  # GraalEE-NI-SERIAL-ML
+  ""                                                                  # GraalEE-NI-SERIAL-PGO
+  ""                                                                  # GraalEE-NI-G1
+  ""                                                                  # GraalEE-NI-G1-ML
+  ""                                                                  # GraalEE-NI-G1-PGO
 )
 
 if [[ ${#modes[@]} != ${#jdks[@]} || ${#jdks[@]} != ${#jdk_ni_opts[@]} || ${#jdk_ni_opts[@]} != ${#jdk_runtime_opts[@]} ]]; then

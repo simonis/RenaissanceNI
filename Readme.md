@@ -81,6 +81,8 @@ $ git checkout RenaissanceNI
 $ R
 ```
 ```R
+# Install pak if it is not already installed
+> install.packages("pak")
 # Build and install the rren package
 > pak::pak('.')
 ...
