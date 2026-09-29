@@ -2,34 +2,40 @@
 
 This repository provides some scripts for running a compatible subset of the  Renaissance benchmarks as Graal native images and compares the performance of OpenJDK's HotSpot JVM with various GraalVM and GraalVM Native Image configurations.
 
-The results for JDK 25 look as follows (click on the image for a larger version):
+The results for OpenJDK 25/27 and GraalVM 25.4.4.1.1 look as follows (click on the image for a larger version):
 
-[![Renaissance 0.16.1 with OpenJDK/GraalVM 25](./output/results/2026-02-16-09-47-38/stripe-jdk-25.svg)](https://raw.githubusercontent.com/simonis/RenaissanceNI/refs/heads/main/output/results/2026-02-16-09-47-38/stripe-jdk-25.svg)
+[![Renaissance 0.16.1 with OpenJDK 25/27 and GraalVM 25.4.4](./output/results/2026-09-26-10-27-41/GraalVM_25.4.4.svg)](https://raw.githubusercontent.com/simonis/RenaissanceNI/refs/heads/main/output/results/2026-09-26-10-27-41/GraalVM_25.4.4.svg)
 
 In this graph, the labels for the JVM implementation have the following meaning:
 - OpenJDK-25: plain OpenJDK 25 running with the default C2/G1 configuration
-- GraalCE-25-JIT: GraalVM 25 Community edition with the Graal JIT (i.e. "libgraal") running as high tier JIT and the default G1 collector.
-- GraalEE-25-JIT: Oracle GraalVM 25 (formerly known as "Enterprise Edition) with the Graal JIT (i.e. "libgraal") running as high tier JIT and the default G1 collector.
-- GraalCE-25-NI: Native image produced by the GraalVM 25 Community edition (running with the default Serial GC).
-- GraalCE-25-NI-SHEN: Native image produced by the GraalVM 25 Community edition (running with a [development version of Shenandoah GC in "passive" (i.e. "Stop-The-World" mode)](https://github.com/simonis/labs-openjdk/tree/simonis/GR-70066)).
-- GraalEE-25-NI: Native image produced by Oracle GraalVM 25 (running with the default Serial GC and without automatic, ML-powered, profile guided optimizations (PGO), i.e. `-H:-MLProfileInference`).
-- GraalEE-25-NI-ML: Native image produced by Oracle GraalVM 25 (running with the default Serial GC and automatic, Machine Learning powered, profile guided optimizations (PGO)).
-- GraalEE-25-NI-PGO: Native image produced by Oracle GraalVM 25 (running with the default Serial GC and explicit, profile guided optimizations (PGO), i.e. training run).
-- GraalEE-25-NI-G1: Native image produced by Oracle GraalVM 25 (running with G1 GC and without automatic, ML-powered, profile guided optimizations (PGO), i.e. `-H:-MLProfileInference`).
-- GraalEE-25-NI-G1-ML: Native image produced by Oracle GraalVM 25 (running with G1 GC and automatic, Machine Learning powered, profile guided optimizations (PGO)).
-- GraalEE-25-NI-G1-PGO: Native image produced by Oracle GraalVM 25 (running with the G1 GC and explicit, profile guided optimizations (PGO), i.e. training run).
+- OpenJDK-27: plain OpenJDK 27 running with the default C2/G1 configuration
+- GraalCE-JIT: GraalVM 25.4.4.1.1 Community edition with the Graal JIT (i.e. "libgraal") running as high tier JIT and the default G1 collector.
+- GraalEE-JIT: Oracle GraalVM 25.4.4.1.1 (formerly known as "Enterprise Edition) with the Graal JIT (i.e. "libgraal") running as high tier JIT and the default G1 collector.
+- GraalCE-NI-SERIAL: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with the default Serial GC).
+- GraalCE-NI-G1: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with the [development version of G1 GC](https://github.com/graalvm/labs-openjdk/tree/chaeubl/GR-77360)).
+- GraalCE-NI-SHEN-PASSIVE: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with a [development version of Shenandoah GC in stop-the-world mode (i.e. `-H:ShenandoahGCMode=passive`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
+- GraalCE-NI-SHEN-SATB: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with a [development version of Shenandoah GC in concurrent mode (i.e. `-H:ShenandoahGCMode=satb`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
+- GraalCE-NI-SHEN-Gen: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with a [development version of Shenandoah GC in generational mode (i.e. `-H:ShenandoahGCMode=generational`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
+- GraalEE-NI-SERIAL: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with the default Serial GC and without automatic, ML-powered, profile guided optimizations (PGO), i.e. `-H:-MLProfileInference`).
+- GraalEE-NI-ML: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with the default Serial GC and automatic, Machine Learning powered, profile guided optimizations (PGO)).
+- GraalEE-NI-PGO: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with the default Serial GC and explicit, profile guided optimizations (PGO), i.e. training run).
+- GraalEE-NI-G1: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with G1 GC and without automatic, ML-powered, profile guided optimizations (PGO), i.e. `-H:-MLProfileInference`).
+- GraalEE-NI-G1-ML: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with G1 GC and automatic, Machine Learning powered, profile guided optimizations (PGO)).
+- GraalEE-NI-G1-PGO: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with the G1 GC and explicit, profile guided optimizations (PGO), i.e. training run).
 
-The above numbers were collected on a [c5.metal](https://aws.amazon.com/de/ec2/instance-types/c5/) bare metal instance with 96 Intel Xeon vCPUs and 192gb RAM using [Renaissance 0.16.1](https://renaissance.dev/download). All benchmarks were run with `-Xms12g -Xmx12g` for 10 minutes and in the graph the results within the first three minutes were discarded to accommodate for warmup. The native images were compiled with `-O3`.
+The above numbers were collected on a [m7i.8xlarge](https://aws.amazon.com/de/ec2/instance-types/m7i/) instance with 32 Intel Xeon vCPUs and 128gb RAM using [Renaissance 0.16.1](https://renaissance.dev/download). All benchmarks were run with `-Xms12g -Xmx12g` for 200 seconds and in the graph the results within the first 20 seconds were discarded to accommodate for warmup. The native images were compiled with `-O3`.
 
 ## Observations
 
-The first three columns in each subgraph represent HotSot executions with C2, Graal CE and Graal EE JIT respectively (all using G2 GC by default). The results are quite similar to those which are published on the [original Renaissance website](https://renaissance.dev/) for JDK 23. On average, the Graal CE JIT is slightly slower than C2 and the Graal EE JIT slightly faster.
+The first four columns in each subgraph represent HotSot executions with JDK 25 C2, JDK 27 C2, Graal CE and Graal EE JIT respectively (all using G1 GC by default). The results are quite similar to those which are published on the [original Renaissance website](https://renaissance.dev/) for JDK 23. Since the [last measurements with GraalVM 25](./results_GraalVM_25.md) the Graal CE JIT has considerably improved and now beats C2 in many cases. Although a lot of the former exclusive EE features have been open sourced and integrated into the CE version, the Graal EE JIT is still slightly faster compared to CE most of the time.
 
-For the following 8 columns, which all represent Native Image runs, the outcomes are a little bit more nuanced. *finagle-chirper* is not representative. All native image executions are more than 50% slower than the corresponding JIT runs. One of the reason might be that the native images are silently failing to load the native `libzstd-jni-1.5.6-7.so` library. The *reactors* results show a quite high variance (although it is about the same for all JVM version). Both benchmarks require further investigations.
+Oracle Graal NI with PGO and either Serial of G1 GC (depending on the GC characteristics of the benchmark) performs really well and is on par or even faster compared to the HotSpot C2/G1. However, Graal Community Edition NI with the development versions of G1 and Shenandoah has considerably caught up since EE features like XXX have been integrated into the community version.
 
-Apart from that, Oracle Graal NI with PGO and either Serial of G1 GC (depending on the GC characteristics of the benchmark) performs really well and is on par or faster compared to the HotSpot C2/G1. However, Graal Community Edition NI (which currently only supports Serial GC and no PGO) performs really bad and only reaches ~50% of the HotSpot performance on average. The Graal CE NI with Shenandoah runs show first promising results for some benchmarks although it is still in early development and only runs in Stop-the-World mode for now.
+While it is interesting to see that for specific benchmarks like e.g. *future-genetics* or *reactors* with serial GC and *dotty*, *akka* or *scala-kmeans* with G1 GC the CE version performs even slightly better than the EE version, in general the corresponding EE versions are still faster compared to their CE counterparts.
 
-But the biggest gap between Oracle GraalVM and GraalVM CE clearly seems to be the superior compiler inlining and optimization phases together with PGO in the Oracle version which are both missing from the Community Edition. This makes it currently almost impossible to replace HotSpot in production for any longer running, throughput oriented applications with Graal CE Native Images and only leaves the niche of short-running, startup sensitive applications for the Community Edition (read e.g. my comparison of "[Leyden vs. Graal Native Image](https://github.com/simonis/LeydenVsGraalNative/)" to see where even Graal CE NI still shines compared to HotSpot).
+The biggest remaining gap between Oracle GraalVM and GraalVM CE is clearly Profiling Guided Optimization (PGO) which for some benchmarks like e.g. *mnemonics*, *scala-docu* or *scrabble* can make a difference of up to 50% or more.
+
+The first development version of Shenandoah performs quite well although these Renaissance benchmarks are mostly throughput-oriented benchmarks where the additional overhead introduces by Shenandoah's Load Reference Barriers (LRB) is significant. This can be seen by the fact that Shenandoah in stop-the-world mode (i.e. `-H:ShenandoahGCMode=passive`), which doesn't require any barriers at all, performs much better. While there's probably still some optimization potential to improve Shenandoah's barrier performance, internal tests with the more latency-oriented SPECjbb2015 already show promising results and superior "critical j-OPS" numbers compared to G1 GC.
 
 ## Details on running the benchmarks
 
@@ -43,10 +49,9 @@ The script can be configured with environment variables, many of which are manda
 
 Name | Mandatory | Default | Description
 :--- | :-------: | :-----: | :----------
-`OPENJDK_HOME` | &check; | &cross; | Directory where to find a plain OpenJDK distribution |
-`GRAALCE_HOME` | &check; | &cross; | Directory where to find a plain Graal CE distribution |
-`GRAALCE_SHEN_HOME` | &check; | &cross; | Directory where to find a plain Graal CE distribution with [Shenandoah support](https://github.com/simonis/labs-openjdk/tree/simonis/GR-70066) |
-`SHENANDOAH_HOME` | &check; | &cross; | Directory where to find [`libshenandoahgc-ur.so`](https://github.com/simonis/labs-openjdk/tree/simonis/GR-70066) |
+`OPENJDK_25_HOME` | &check; | &cross; | Directory where to find a plain OpenJDK 25 distribution |
+`OPENJDK_LATEST_HOME` | &check; | &cross; | Directory where to find a plain OpenJDK 27 distribution |
+`GRAALCE_HOME` | &check; | &cross; | Directory where to find a Graal CE distribution built with G1 and shenadoah support from my [labs-openjdk `simonis/GR-77360-GenShen`](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen) and [graalvm `simonis/GR-70306-upstream`](https://github.com/simonis/graal/tree/simonis/GR-70306-upstream) branches |
 `GRAALEE_HOME` | &check; | &cross; | Directory where to find an Oracle Graal distribution |
 `RENAISSANCE_SINGLE` | &check; | &cross; | The `single/` subdirectory of an unpacked Renaissaince benchmark `.jar` file |
 `OUTPUT` | &cross; | `RenaissanceNI/output` | Directory where to place the artifacts produced by the script. All the benchmarks results (i.e. `.json` files) of a single script run are placed under ``${OUTPUT}/results/`date +%Y-%m-%d-%H-%M-%S`/<benchmark>``. The generated artifacts (i.e. native images and PGO files) are placed under `${OUTPUT}/<benchmark>` and the reachability metadata under `${OUTPUT}/<benchmark>/conf`. Non existing directories will be created. |
@@ -70,6 +75,12 @@ $ ./scripts/strip_results.sh ./output/results/ json ', "-XX:ActiveProcessorCount
 ```
 
 The second invocation is only required if you have use `FINAGLE_CHIRPER_MAX_CPUS` and the pattern should be adapted accordingly.
+
+Never versions of GraalVM Native Image also have a bug which prevents them from correctly exporting `-Dproperty=value` command line arguments through `RuntimeMXBean::getInputArguments()`. The `scripts/fix_results.sh` inserts the correct `-Dmode=<mode>` properties into the generated `.json` result files based on the corresponding directories they are saved in. This is necessary for the R scripts to correctly assign the results to the correct Native Image runs (e.g. `GraalCE-NI-SERIAL`, etc.):
+
+```bash
+$ ./scripts/fix_results.sh ./output/results/
+```
 
 Once we have prepared the results, we can clone [my version of `utilities-r`](https://github.com/simonis/utilities-r/tree/RenaissanceNI)
 and use them as follows:
@@ -102,5 +113,7 @@ $ R
 > readr::write_csv(labels, "./output/results/labels_all.csv")
 # Create the graph. Discard all measurements in the first 'warmup' seconds
 # This will create a file 'stripe-jdk-<vm_jdk>.svg' in the current directory.
-> rren::plot_website_stripes(renaissance, warmup=180, labels="./output/results/labels_all.csv", palette='Paired')
+> rren::plot_website_stripes(renaissance, warmup=180, labels="./output/results/labels_all.csv", \
+                             palette='Paired', name='GraalVM_25.4.4.svg', \
+                             label_prefix='GraalVM 25.4.4.1.1\nm7i.8xlarge\n32vCPUs / 128gb\n-Xmx12g\n200sec / 20sec warmup'))
 ```
