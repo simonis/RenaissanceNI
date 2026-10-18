@@ -6,7 +6,7 @@ if [[ ! -v OPENJDK_25_HOME ]]; then
   echo "You need to define OPENJDK_25_HOME"
   exit 1
 fi
-if [[ ! -v OPENJDK_LATESST_HOME ]]; then
+if [[ ! -v OPENJDK_LATEST_HOME ]]; then
   echo "You need to define OPENJDK_LATEST_HOME"
   exit 1
 fi
