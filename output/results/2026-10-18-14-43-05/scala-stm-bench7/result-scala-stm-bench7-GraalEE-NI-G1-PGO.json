@@ -1,0 +1,798 @@
+{
+  "benchmarks": [
+    "scala-stm-bench7"
+  ],
+  "format_version": 6,
+  "data": {
+    "scala-stm-bench7": {
+      "results": [
+        {
+          "duration_ns": 1363070107,
+          "uptime_ns": 34328529
+        },
+        {
+          "duration_ns": 1174807078,
+          "uptime_ns": 1406245947
+        },
+        {
+          "duration_ns": 1204588823,
+          "uptime_ns": 2589854840
+        },
+        {
+          "duration_ns": 1191452999,
+          "uptime_ns": 3802858083
+        },
+        {
+          "duration_ns": 1224344984,
+          "uptime_ns": 5002633846
+        },
+        {
+          "duration_ns": 1250124813,
+          "uptime_ns": 6235466110
+        },
+        {
+          "duration_ns": 1274363443,
+          "uptime_ns": 7493925756
+        },
+        {
+          "duration_ns": 1264663880,
+          "uptime_ns": 8776348971
+        },
+        {
+          "duration_ns": 1190858029,
+          "uptime_ns": 10049050577
+        },
+        {
+          "duration_ns": 1230265557,
+          "uptime_ns": 11248968982
+        },
+        {
+          "duration_ns": 1201687709,
+          "uptime_ns": 12488161857
+        },
+        {
+          "duration_ns": 1204066384,
+          "uptime_ns": 13698777671
+        },
+        {
+          "duration_ns": 1228698758,
+          "uptime_ns": 14912139509
+        },
+        {
+          "duration_ns": 1185025657,
+          "uptime_ns": 16149780846
+        },
+        {
+          "duration_ns": 1180683566,
+          "uptime_ns": 17343965125
+        },
+        {
+          "duration_ns": 1188859421,
+          "uptime_ns": 18533741599
+        },
+        {
+          "duration_ns": 1191084294,
+          "uptime_ns": 19731599564
+        },
+        {
+          "duration_ns": 1212703420,
+          "uptime_ns": 20931679440
+        },
+        {
+          "duration_ns": 1221392753,
+          "uptime_ns": 22153562601
+        },
+        {
+          "duration_ns": 1189881981,
+          "uptime_ns": 23383966443
+        },
+        {
+          "duration_ns": 1200476370,
+          "uptime_ns": 24583031423
+        },
+        {
+          "duration_ns": 1202586761,
+          "uptime_ns": 25792616512
+        },
+        {
+          "duration_ns": 1195931265,
+          "uptime_ns": 27004224487
+        },
+        {
+          "duration_ns": 1234123214,
+          "uptime_ns": 28209209376
+        },
+        {
+          "duration_ns": 1253655948,
+          "uptime_ns": 29452574196
+        },
+        {
+          "duration_ns": 1222152995,
+          "uptime_ns": 30715413405
+        },
+        {
+          "duration_ns": 1189285173,
+          "uptime_ns": 31946787001
+        },
+        {
+          "duration_ns": 1212238820,
+          "uptime_ns": 33145143118
+        },
+        {
+          "duration_ns": 1188403868,
+          "uptime_ns": 34366646435
+        },
+        {
+          "duration_ns": 1192140347,
+          "uptime_ns": 35564053680
+        },
+        {
+          "duration_ns": 1194333270,
+          "uptime_ns": 36765128171
+        },
+        {
+          "duration_ns": 1213524787,
+          "uptime_ns": 37968392443
+        },
+        {
+          "duration_ns": 1183825920,
+          "uptime_ns": 39190837195
+        },
+        {
+          "duration_ns": 1210386429,
+          "uptime_ns": 40383620175
+        },
+        {
+          "duration_ns": 1180462764,
+          "uptime_ns": 41602994965
+        },
+        {
+          "duration_ns": 1272085302,
+          "uptime_ns": 42792508095
+        },
+        {
+          "duration_ns": 1230393955,
+          "uptime_ns": 44073752987
+        },
+        {
+          "duration_ns": 1207929529,
+          "uptime_ns": 45313143041
+        },
+        {
+          "duration_ns": 1195336902,
+          "uptime_ns": 46530057814
+        },
+        {
+          "duration_ns": 1206140484,
+          "uptime_ns": 47734351940
+        },
+        {
+          "duration_ns": 1188583075,
+          "uptime_ns": 48949447752
+        },
+        {
+          "duration_ns": 1188952459,
+          "uptime_ns": 50147098210
+        },
+        {
+          "duration_ns": 1201604677,
+          "uptime_ns": 51345257248
+        },
+        {
+          "duration_ns": 1227556433,
+          "uptime_ns": 52556070466
+        },
+        {
+          "duration_ns": 1231586343,
+          "uptime_ns": 53792770120
+        },
+        {
+          "duration_ns": 1179024685,
+          "uptime_ns": 55033225493
+        },
+        {
+          "duration_ns": 1203753598,
+          "uptime_ns": 56221245391
+        },
+        {
+          "duration_ns": 1190616503,
+          "uptime_ns": 57433887374
+        },
+        {
+          "duration_ns": 1195692267,
+          "uptime_ns": 58633540746
+        },
+        {
+          "duration_ns": 1239385668,
+          "uptime_ns": 59838258321
+        },
+        {
+          "duration_ns": 1181775313,
+          "uptime_ns": 61086587051
+        },
+        {
+          "duration_ns": 1199389896,
+          "uptime_ns": 62277217330
+        },
+        {
+          "duration_ns": 1180388733,
+          "uptime_ns": 63485531516
+        },
+        {
+          "duration_ns": 1196852752,
+          "uptime_ns": 64674965479
+        },
+        {
+          "duration_ns": 1179414660,
+          "uptime_ns": 65881016835
+        },
+        {
+          "duration_ns": 1223147534,
+          "uptime_ns": 67069584200
+        },
+        {
+          "duration_ns": 1199741422,
+          "uptime_ns": 68301714632
+        },
+        {
+          "duration_ns": 1196150737,
+          "uptime_ns": 69510640677
+        },
+        {
+          "duration_ns": 1181197617,
+          "uptime_ns": 70715910726
+        },
+        {
+          "duration_ns": 1179121277,
+          "uptime_ns": 71906127194
+        },
+        {
+          "duration_ns": 1177896245,
+          "uptime_ns": 73094335554
+        },
+        {
+          "duration_ns": 1223987945,
+          "uptime_ns": 74281313918
+        },
+        {
+          "duration_ns": 1260479519,
+          "uptime_ns": 75514423292
+        },
+        {
+          "duration_ns": 1211482931,
+          "uptime_ns": 76784053063
+        },
+        {
+          "duration_ns": 1180089365,
+          "uptime_ns": 78004699341
+        },
+        {
+          "duration_ns": 1193552219,
+          "uptime_ns": 79193928244
+        },
+        {
+          "duration_ns": 1224015472,
+          "uptime_ns": 80396598020
+        },
+        {
+          "duration_ns": 1212554081,
+          "uptime_ns": 81630239539
+        },
+        {
+          "duration_ns": 1203282313,
+          "uptime_ns": 82852024700
+        },
+        {
+          "duration_ns": 1186975024,
+          "uptime_ns": 84064430739
+        },
+        {
+          "duration_ns": 1194868425,
+          "uptime_ns": 85260513942
+        },
+        {
+          "duration_ns": 1188200040,
+          "uptime_ns": 86464520387
+        },
+        {
+          "duration_ns": 1250860374,
+          "uptime_ns": 87661809381
+        },
+        {
+          "duration_ns": 1233822463,
+          "uptime_ns": 88921849169
+        },
+        {
+          "duration_ns": 1204598855,
+          "uptime_ns": 90164828605
+        },
+        {
+          "duration_ns": 1183759409,
+          "uptime_ns": 91378464239
+        },
+        {
+          "duration_ns": 1181391581,
+          "uptime_ns": 92571367698
+        },
+        {
+          "duration_ns": 1180220758,
+          "uptime_ns": 93761769876
+        },
+        {
+          "duration_ns": 1199115725,
+          "uptime_ns": 94951056844
+        },
+        {
+          "duration_ns": 1209155627,
+          "uptime_ns": 96159127218
+        },
+        {
+          "duration_ns": 1217247243,
+          "uptime_ns": 97377263675
+        },
+        {
+          "duration_ns": 1200691796,
+          "uptime_ns": 98603453349
+        },
+        {
+          "duration_ns": 1215028704,
+          "uptime_ns": 99813088372
+        },
+        {
+          "duration_ns": 1214282525,
+          "uptime_ns": 101037074850
+        },
+        {
+          "duration_ns": 1178883384,
+          "uptime_ns": 102260353761
+        },
+        {
+          "duration_ns": 1236718350,
+          "uptime_ns": 103448139717
+        },
+        {
+          "duration_ns": 1199811148,
+          "uptime_ns": 104693973400
+        },
+        {
+          "duration_ns": 1202159431,
+          "uptime_ns": 105902925907
+        },
+        {
+          "duration_ns": 1209653321,
+          "uptime_ns": 107113967783
+        },
+        {
+          "duration_ns": 1173484698,
+          "uptime_ns": 108332511762
+        },
+        {
+          "duration_ns": 1208967202,
+          "uptime_ns": 109515210457
+        },
+        {
+          "duration_ns": 1194321594,
+          "uptime_ns": 110733224891
+        },
+        {
+          "duration_ns": 1211972591,
+          "uptime_ns": 111936596039
+        },
+        {
+          "duration_ns": 1249958794,
+          "uptime_ns": 113157504661
+        },
+        {
+          "duration_ns": 1196043322,
+          "uptime_ns": 114416414542
+        },
+        {
+          "duration_ns": 1216044842,
+          "uptime_ns": 115621525255
+        },
+        {
+          "duration_ns": 1210583036,
+          "uptime_ns": 116846624246
+        },
+        {
+          "duration_ns": 1211045268,
+          "uptime_ns": 118066210897
+        },
+        {
+          "duration_ns": 1217717476,
+          "uptime_ns": 119286407542
+        },
+        {
+          "duration_ns": 1191438477,
+          "uptime_ns": 120513276789
+        },
+        {
+          "duration_ns": 1201605760,
+          "uptime_ns": 121713776815
+        },
+        {
+          "duration_ns": 1175292972,
+          "uptime_ns": 122924361616
+        },
+        {
+          "duration_ns": 1202111009,
+          "uptime_ns": 124108633834
+        },
+        {
+          "duration_ns": 1210157309,
+          "uptime_ns": 125319621544
+        },
+        {
+          "duration_ns": 1188017263,
+          "uptime_ns": 126538776306
+        },
+        {
+          "duration_ns": 1219041329,
+          "uptime_ns": 127735777295
+        },
+        {
+          "duration_ns": 1206515515,
+          "uptime_ns": 128963792652
+        },
+        {
+          "duration_ns": 1191765546,
+          "uptime_ns": 130179295232
+        },
+        {
+          "duration_ns": 1195105924,
+          "uptime_ns": 131380009125
+        },
+        {
+          "duration_ns": 1210827408,
+          "uptime_ns": 132584159418
+        },
+        {
+          "duration_ns": 1199843188,
+          "uptime_ns": 133804007457
+        },
+        {
+          "duration_ns": 1220064042,
+          "uptime_ns": 135013059686
+        },
+        {
+          "duration_ns": 1179037603,
+          "uptime_ns": 136242254576
+        },
+        {
+          "duration_ns": 1181846075,
+          "uptime_ns": 137430406199
+        },
+        {
+          "duration_ns": 1196966984,
+          "uptime_ns": 138621351509
+        },
+        {
+          "duration_ns": 1192358357,
+          "uptime_ns": 139827531128
+        },
+        {
+          "duration_ns": 1183995931,
+          "uptime_ns": 141029072451
+        },
+        {
+          "duration_ns": 1202487545,
+          "uptime_ns": 142222131368
+        },
+        {
+          "duration_ns": 1211047447,
+          "uptime_ns": 143433700712
+        },
+        {
+          "duration_ns": 1186263930,
+          "uptime_ns": 144653891856
+        },
+        {
+          "duration_ns": 1184724111,
+          "uptime_ns": 145849346833
+        },
+        {
+          "duration_ns": 1187413516,
+          "uptime_ns": 147043207158
+        },
+        {
+          "duration_ns": 1213362786,
+          "uptime_ns": 148239723100
+        },
+        {
+          "duration_ns": 1231526507,
+          "uptime_ns": 149462301737
+        },
+        {
+          "duration_ns": 1199497767,
+          "uptime_ns": 150702975321
+        },
+        {
+          "duration_ns": 1182501062,
+          "uptime_ns": 151911547462
+        },
+        {
+          "duration_ns": 1218188613,
+          "uptime_ns": 153103178896
+        },
+        {
+          "duration_ns": 1207967038,
+          "uptime_ns": 154330390864
+        },
+        {
+          "duration_ns": 1202698721,
+          "uptime_ns": 155547559263
+        },
+        {
+          "duration_ns": 1193599642,
+          "uptime_ns": 156759430915
+        },
+        {
+          "duration_ns": 1190863479,
+          "uptime_ns": 157962108065
+        },
+        {
+          "duration_ns": 1198160803,
+          "uptime_ns": 159162084908
+        },
+        {
+          "duration_ns": 1187890926,
+          "uptime_ns": 160369369323
+        },
+        {
+          "duration_ns": 1197007720,
+          "uptime_ns": 161566451575
+        },
+        {
+          "duration_ns": 1201183715,
+          "uptime_ns": 162772495696
+        },
+        {
+          "duration_ns": 1251263944,
+          "uptime_ns": 163982686809
+        },
+        {
+          "duration_ns": 1204692664,
+          "uptime_ns": 165243167655
+        },
+        {
+          "duration_ns": 1214798665,
+          "uptime_ns": 166456955739
+        },
+        {
+          "duration_ns": 1197732759,
+          "uptime_ns": 167680887501
+        },
+        {
+          "duration_ns": 1203226547,
+          "uptime_ns": 168887801716
+        },
+        {
+          "duration_ns": 1178650645,
+          "uptime_ns": 170100231315
+        },
+        {
+          "duration_ns": 1184418986,
+          "uptime_ns": 171287961815
+        },
+        {
+          "duration_ns": 1222148033,
+          "uptime_ns": 172481394352
+        },
+        {
+          "duration_ns": 1221892631,
+          "uptime_ns": 173712600965
+        },
+        {
+          "duration_ns": 1185549112,
+          "uptime_ns": 174943655377
+        },
+        {
+          "duration_ns": 1224995257,
+          "uptime_ns": 176138273276
+        },
+        {
+          "duration_ns": 1187458672,
+          "uptime_ns": 177372331847
+        },
+        {
+          "duration_ns": 1204074495,
+          "uptime_ns": 178568878300
+        },
+        {
+          "duration_ns": 1218610651,
+          "uptime_ns": 179782135343
+        },
+        {
+          "duration_ns": 1188387046,
+          "uptime_ns": 181009918039
+        },
+        {
+          "duration_ns": 1193815531,
+          "uptime_ns": 182207379500
+        },
+        {
+          "duration_ns": 1187089407,
+          "uptime_ns": 183410379367
+        },
+        {
+          "duration_ns": 1202132207,
+          "uptime_ns": 184606537914
+        },
+        {
+          "duration_ns": 1202898988,
+          "uptime_ns": 185817647325
+        },
+        {
+          "duration_ns": 1199438932,
+          "uptime_ns": 187029451256
+        },
+        {
+          "duration_ns": 1203406240,
+          "uptime_ns": 188237757536
+        },
+        {
+          "duration_ns": 1189159741,
+          "uptime_ns": 189450136114
+        },
+        {
+          "duration_ns": 1181659937,
+          "uptime_ns": 190648251193
+        },
+        {
+          "duration_ns": 1181569085,
+          "uptime_ns": 191838910306
+        },
+        {
+          "duration_ns": 1180956851,
+          "uptime_ns": 193029411599
+        },
+        {
+          "duration_ns": 1217856366,
+          "uptime_ns": 194219249057
+        },
+        {
+          "duration_ns": 1266939658,
+          "uptime_ns": 195446050898
+        },
+        {
+          "duration_ns": 1209992352,
+          "uptime_ns": 196721990561
+        },
+        {
+          "duration_ns": 1197829563,
+          "uptime_ns": 197940901682
+        },
+        {
+          "duration_ns": 1210245925,
+          "uptime_ns": 199147641956
+        },
+        {
+          "duration_ns": 1212774503,
+          "uptime_ns": 200366997693
+        }
+      ],
+      "termination": "normal"
+    }
+  },
+  "environment": {
+    "os": {
+      "virt_mem_committed": 17641316352,
+      "name": "Linux",
+      "open_fd_count": 6,
+      "available_processors": 32,
+      "phys_mem_total": 132127039488,
+      "version": "6.12.111-136.204.amzn2023.aarch64",
+      "arch": "aarch64",
+      "max_fd_count": 524288,
+      "swap_space_free": 0,
+      "phys_mem_free": 103016095744,
+      "swap_space_total": 0
+    },
+    "vm": {
+      "termination": "normal",
+      "name": "Substrate VM",
+      "classloading": {
+        "class_count": 0,
+        "classes_total": 0
+      },
+      "start_ns": 119225940018059,
+      "mode": "g1 gc, compressed references, pgo",
+      "args": [
+        "-Xms12g",
+        "-Xmx12g",
+        "-Dmode=GraalEE-NI-G1-PGO"
+      ],
+      "vendor": "Oracle Corporation",
+      "spec_vendor": "Oracle Corporation",
+      "spec_name": "Java Virtual Machine Specification",
+      "compiler": {
+        "name": "Graal"
+      },
+      "start_iso": "2026-10-19T06:41:33.296Z",
+      "collectors": [],
+      "start_unix_ms": 1792392093296,
+      "version": "25.0.4.1.1+1-LTS",
+      "pools": [
+        {
+          "name": "runtime code cache (code and data)",
+          "type": "NON_HEAP",
+          "usage": {
+            "init": -1,
+            "used": 0,
+            "committed": 0,
+            "max": -1
+          },
+          "peak_usage": {
+            "init": -1,
+            "used": 0,
+            "committed": 0,
+            "max": -1
+          }
+        },
+        {
+          "name": "runtime code cache (native metadata)",
+          "type": "NON_HEAP",
+          "usage": {
+            "init": -1,
+            "used": 0,
+            "committed": 0,
+            "max": -1
+          },
+          "peak_usage": {
+            "init": -1,
+            "used": 0,
+            "committed": 0,
+            "max": -1
+          }
+        }
+      ],
+      "uptime_ms": 201586,
+      "compressed_oops_mode": null,
+      "threads": {
+        "thread_count": 4,
+        "thread_count_max": 36,
+        "daemon_thread_count": 3,
+        "threads_total": 5482
+      },
+      "spec_version": "25",
+      "memory": {
+        "heap_usage": {
+          "init": -1,
+          "used": 2395097592,
+          "committed": 12885950464,
+          "max": 12885950464
+        },
+        "nonheap_usage": {
+          "init": -1,
+          "used": 0,
+          "committed": 0,
+          "max": -1
+        },
+        "pending_finalization_count": 0
+      }
+    },
+    "jre": {
+      "java_version": "25.0.4.1.1",
+      "name": "GraalVM Runtime Environment",
+      "class_path": [
+        ""
+      ],
+      "spec_version": "25",
+      "spec_vendor": "Oracle Corporation",
+      "spec_name": "Java Platform API Specification",
+      "home": null,
+      "version": "25.0.4.1.1+1-LTS-jvmci-25.4-b23",
+      "java_vendor": "Oracle Corporation",
+      "library_path": []
+    }
+  },
+  "suite": {
+    "git": {
+      "commit_hash": "e294171fdd7c44d73d8463b79d12a2199e276fec",
+      "commit_date": "2025-11-05T16:36:48+0100",
+      "dirty": "false"
+    },
+    "name": "Renaissance Benchmark Suite",
+    "version": "0.16.1"
+  }
+}
