@@ -25,6 +25,11 @@ In this graph, the labels for the JVM implementation have the following meaning:
 
 The above numbers were collected on a [m7i.8xlarge](https://aws.amazon.com/de/ec2/instance-types/m7i/) instance with 32 Intel Xeon vCPUs and 128gb RAM using [Renaissance 0.16.1](https://renaissance.dev/download). All benchmarks were run with `-Xms12g -Xmx12g` for 200 seconds and in the graph the results within the first 20 seconds were discarded to accommodate for warmup. The native images were compiled with `-O3`.
 
+The following picture shows the results for the same configuration collected on a [m6g.8xlarge](https://aws.amazon.com/de/ec2/instance-types/m6g/) instance with 32 Graviton 2 vCPUs and 128gb RAM.
+
+[![Renaissance 0.16.1 with OpenJDK 25/27 and GraalVM 25.5.5-dev](./output/results/2026-10-18-14-43-05/Graal25.5.5-dev_aarch64_G1-meta.svg)](https://raw.githubusercontent.com/simonis/RenaissanceNI/refs/heads/main/output/results/2026-10-18-14-43-05/Graal25.5.5-dev_aarch64_G1-meta.svg)
+
+
 ## Observations
 
 The first four columns in each subgraph represent HotSot executions with JDK 25 C2, JDK 27 C2, Graal CE and Graal EE JIT respectively (all using G1 GC by default). The results are quite similar to those which are published on the [original Renaissance website](https://renaissance.dev/) for JDK 23. Since the [last measurements with GraalVM 25](./results_GraalVM_25.md) the Graal CE JIT has considerably improved and now beats C2 in many cases. Although a lot of the former exclusive EE features have been open sourced and integrated into the CE version, the Graal EE JIT is still slightly faster compared to CE most of the time.

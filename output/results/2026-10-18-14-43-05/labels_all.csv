@@ -1,0 +1,16 @@
+vm_label,vm_order,vm_jdk,vm,vm_name,vm_version,vm_configuration
+OpenJDK-25,1,NA,2ee111dd,OpenJDK 64-Bit Server VM,25.0.2+10-69,-Xms12g -Xmx12g -Dmode=OpenJDK-25
+OpenJDK-27,2,NA,45838ef1,OpenJDK 64-Bit Server VM,27+35-2325,-Xms12g -Xmx12g -Dmode=OpenJDK-LATEST
+GraalCE-JIT,3,NA,ae1246c8,OpenJDK 64-Bit Server VM,25.0.4.1.1-internal-adhoc.simonisv.labs-openjdk,-XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:+EnableJVMCI -XX:-UnlockExperimentalVMOptions -Xms12g -Xmx12g -Dmode=GraalCE-JIT -XX:+EnableJVMCI -XX:+UseJVMCICompiler -XX:+UseJVMCINativeLibrary
+GraalEE-JIT,4,NA,3f89d3f3,Java HotSpot(TM) 64-Bit Server VM,25.0.4.1.1+1-LTS-jvmci-25.4-b23,-XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:+EnableJVMCI -XX:-UnlockExperimentalVMOptions -Xms12g -Xmx12g -Dmode=GraalEE-JIT -XX:+EnableJVMCI -XX:+UseJVMCICompiler -XX:+UseJVMCINativeLibrary
+GraalCE-NI-SERIAL,5,NA,14da5ae9,Substrate VM,25.0.4.1.1-internal-adhoc.simonisv.labs-openjdk,-Xms12g -Xmx12g -Dmode=GraalCE-NI-SERIAL
+GraalEE-NI-SERIAL,6,NA,871f2433,Substrate VM,25.0.4.1.1+1-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-SERIAL
+GraalEE-NI-SERIAL-ML,7,NA,935a8b37,Substrate VM,25.0.4.1.1+1-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-SERIAL-ML
+GraalEE-NI-SERIAL-PGO,8,NA,0d3477d7,Substrate VM,25.0.4.1.1+1-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-SERIAL-PGO
+GraalCE-NI-G1,9,NA,5d3131bc,Substrate VM,25.0.4.1.1-internal-adhoc.simonisv.labs-openjdk,-Xms12g -Xmx12g -Dmode=GraalCE-NI-G1
+GraalEE-NI-G1,10,NA,40ccc4dc,Substrate VM,25.0.4.1.1+1-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-G1
+GraalEE-NI-G1-ML,11,NA,ecdc3c05,Substrate VM,25.0.4.1.1+1-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-G1-ML
+GraalEE-NI-G1-PGO,12,NA,4f0a2398,Substrate VM,25.0.4.1.1+1-LTS,-Xms12g -Xmx12g -Dmode=GraalEE-NI-G1-PGO
+GraalCE-NI-SHEN-PASSIVE,13,NA,61cc7dc0,Substrate VM,25.0.4.1.1-internal-adhoc.simonisv.labs-openjdk,-Xms12g -Xmx12g -Dmode=GraalCE-NI-SHEN-PASSIVE
+GraalCE-NI-SHEN-SATB,14,NA,e3201c7a,Substrate VM,25.0.4.1.1-internal-adhoc.simonisv.labs-openjdk,-Xms12g -Xmx12g -Dmode=GraalCE-NI-SHEN-SATB
+GraalCE-NI-SHEN-GEN,15,NA,48e6da50,Substrate VM,25.0.4.1.1-internal-adhoc.simonisv.labs-openjdk,-Xms12g -Xmx12g -Dmode=GraalCE-NI-SHEN-GEN
