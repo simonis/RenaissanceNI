@@ -1,0 +1,306 @@
+{
+  "benchmarks": ["akka-uct"],
+  "format_version": 6,
+  "data": {
+    "akka-uct": {
+      "results": [{
+        "duration_ns": 9527540430,
+        "uptime_ns": 661351259
+      }, {
+        "duration_ns": 7473064553,
+        "uptime_ns": 10256454749
+      }, {
+        "duration_ns": 7710509716,
+        "uptime_ns": 17895027059
+      }, {
+        "duration_ns": 7612534976,
+        "uptime_ns": 25712560949
+      }, {
+        "duration_ns": 7601859460,
+        "uptime_ns": 33401871814
+      }, {
+        "duration_ns": 7786780733,
+        "uptime_ns": 41107816897
+      }, {
+        "duration_ns": 7677426094,
+        "uptime_ns": 48958202272
+      }, {
+        "duration_ns": 7646351296,
+        "uptime_ns": 56731324760
+      }, {
+        "duration_ns": 7688246567,
+        "uptime_ns": 64430933377
+      }, {
+        "duration_ns": 7440707457,
+        "uptime_ns": 72185794666
+      }, {
+        "duration_ns": 7679809962,
+        "uptime_ns": 79709312510
+      }, {
+        "duration_ns": 7406856355,
+        "uptime_ns": 87501358368
+      }, {
+        "duration_ns": 7388609716,
+        "uptime_ns": 95020738302
+      }, {
+        "duration_ns": 7466487112,
+        "uptime_ns": 102523826446
+      }, {
+        "duration_ns": 7828352576,
+        "uptime_ns": 110055597980
+      }, {
+        "duration_ns": 7663786918,
+        "uptime_ns": 118031334630
+      }, {
+        "duration_ns": 7331093490,
+        "uptime_ns": 125833147325
+      }, {
+        "duration_ns": 7422285015,
+        "uptime_ns": 133254637857
+      }, {
+        "duration_ns": 7546225512,
+        "uptime_ns": 140865010168
+      }, {
+        "duration_ns": 7669529685,
+        "uptime_ns": 148492278034
+      }, {
+        "duration_ns": 7279866359,
+        "uptime_ns": 156253087725
+      }, {
+        "duration_ns": 7562823936,
+        "uptime_ns": 163608738347
+      }, {
+        "duration_ns": 7470517816,
+        "uptime_ns": 171232957510
+      }, {
+        "duration_ns": 7379424760,
+        "uptime_ns": 178835075337
+      }, {
+        "duration_ns": 7546761900,
+        "uptime_ns": 186271551447
+      }, {
+        "duration_ns": 7399744444,
+        "uptime_ns": 193916699440
+      }, {
+        "duration_ns": 7478960197,
+        "uptime_ns": 201393522073
+      }],
+      "termination": "normal"
+    }
+  },
+  "environment": {
+    "os": {
+      "virt_mem_committed": 135052853248,
+      "name": "Linux",
+      "open_fd_count": 17,
+      "available_processors": 32,
+      "phys_mem_total": 132922908672,
+      "version": "5.10.270-283.1109.amzn2int.x86_64",
+      "arch": "amd64",
+      "max_fd_count": 65535,
+      "swap_space_free": 0,
+      "phys_mem_free": 72040689664,
+      "swap_space_total": 0
+    },
+    "vm": {
+      "termination": "normal",
+      "name": "Java HotSpot(TM) 64-Bit Server VM",
+      "classloading": {
+        "class_count": 3656,
+        "classes_total": 3657
+      },
+      "start_ns": 105675539950685,
+      "mode": "mixed mode, sharing",
+      "args": ["-XX:ThreadPriorityPolicy=1", "-XX:+UnlockExperimentalVMOptions", "-XX:+EnableJVMCIProduct", "-XX:+EnableJVMCI", "-XX:-UnlockExperimentalVMOptions", "-Xms12g", "-Xmx12g", "-Dmode=GraalEE-JIT", "-XX:+EnableJVMCI", "-XX:+UseJVMCICompiler", "-XX:+UseJVMCINativeLibrary"],
+      "vendor": "Oracle Corporation",
+      "spec_vendor": "Oracle Corporation",
+      "spec_name": "Java Virtual Machine Specification",
+      "compiler": {
+        "name": "HotSpot 64-Bit Tiered Compilers",
+        "compilation_time_ms": 31126
+      },
+      "start_iso": "2026-10-18T15:09:28.472Z",
+      "collectors": [{
+        "name": "G1 Young Generation",
+        "collection_count": 180,
+        "collection_time_ms": 8567
+      }, {
+        "name": "G1 Concurrent GC",
+        "collection_count": 0,
+        "collection_time_ms": 0
+      }, {
+        "name": "G1 Old Generation",
+        "collection_count": 27,
+        "collection_time_ms": 2516
+      }],
+      "start_unix_ms": 1792336168472,
+      "version": "25.0.4.1.1+1-LTS-jvmci-25.4-b23",
+      "pools": [{
+        "name": "CodeHeap 'non-nmethods'",
+        "type": "NON_HEAP",
+        "usage": {
+          "init": 2555904,
+          "used": 4612352,
+          "committed": 4653056,
+          "max": 8761344
+        },
+        "peak_usage": {
+          "init": 2555904,
+          "used": 4615936,
+          "committed": 4653056,
+          "max": 8761344
+        }
+      }, {
+        "name": "Metaspace",
+        "type": "NON_HEAP",
+        "usage": {
+          "init": 0,
+          "used": 20738888,
+          "committed": 21037056,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": 0,
+          "used": 20738888,
+          "committed": 21037056,
+          "max": -1
+        }
+      }, {
+        "name": "CodeHeap 'profiled nmethods'",
+        "type": "NON_HEAP",
+        "usage": {
+          "init": 2555904,
+          "used": 11203200,
+          "committed": 11599872,
+          "max": 121446400
+        },
+        "peak_usage": {
+          "init": 2555904,
+          "used": 11585536,
+          "committed": 11599872,
+          "max": 121446400
+        }
+      }, {
+        "name": "Compressed Class Space",
+        "type": "NON_HEAP",
+        "usage": {
+          "init": 0,
+          "used": 2389672,
+          "committed": 2555904,
+          "max": 1073741824
+        },
+        "peak_usage": {
+          "init": 0,
+          "used": 2389672,
+          "committed": 2555904,
+          "max": 1073741824
+        }
+      }, {
+        "name": "G1 Eden Space",
+        "type": "HEAP",
+        "usage": {
+          "init": 637534208,
+          "used": 6954156032,
+          "committed": 7541358592,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": 637534208,
+          "used": 7725907968,
+          "committed": 7725907968,
+          "max": -1
+        }
+      }, {
+        "name": "G1 Old Gen",
+        "type": "HEAP",
+        "usage": {
+          "init": 12247367680,
+          "used": 103367216,
+          "committed": 5158993920,
+          "max": 12884901888
+        },
+        "peak_usage": {
+          "init": 12247367680,
+          "used": 105009840,
+          "committed": 12247367680,
+          "max": 12884901888
+        }
+      }, {
+        "name": "G1 Survivor Space",
+        "type": "HEAP",
+        "usage": {
+          "init": 0,
+          "used": 179821704,
+          "committed": 184549376,
+          "max": -1
+        },
+        "peak_usage": {
+          "init": 0,
+          "used": 234881024,
+          "committed": 234881024,
+          "max": -1
+        }
+      }, {
+        "name": "CodeHeap 'non-profiled nmethods'",
+        "type": "NON_HEAP",
+        "usage": {
+          "init": 2555904,
+          "used": 3264640,
+          "committed": 3276800,
+          "max": 121450496
+        },
+        "peak_usage": {
+          "init": 2555904,
+          "used": 3264640,
+          "committed": 3276800,
+          "max": 121450496
+        }
+      }],
+      "uptime_ms": 209089,
+      "compressed_oops_mode": "Zero based",
+      "threads": {
+        "thread_count": 106,
+        "thread_count_max": 206,
+        "daemon_thread_count": 37,
+        "threads_total": 18873
+      },
+      "spec_version": "25",
+      "memory": {
+        "heap_usage": {
+          "init": 12884901888,
+          "used": 7237344952,
+          "committed": 12884901888,
+          "max": 12884901888
+        },
+        "nonheap_usage": {
+          "init": 7667712,
+          "used": 42165656,
+          "committed": 43122688,
+          "max": -1
+        },
+        "pending_finalization_count": 0
+      }
+    },
+    "jre": {
+      "java_version": "25.0.4.1.1",
+      "name": "Java(TM) SE Runtime Environment",
+      "class_path": ["/share/software/Java/renaissance-gpl-0.16.1/single/akka-uct.jar"],
+      "spec_version": "25",
+      "spec_vendor": "Oracle Corporation",
+      "spec_name": "Java Platform API Specification",
+      "home": "/share/software/Java/graalvm-25.4.4.1.1+1.1",
+      "version": "25.0.4.1.1+1-LTS-jvmci-25.4-b23",
+      "java_vendor": "Oracle Corporation",
+      "library_path": ["/usr/java/packages/lib", "/usr/lib64", "/lib64", "/lib", "/usr/lib"]
+    }
+  },
+  "suite": {
+    "git": {
+      "commit_hash": "e294171fdd7c44d73d8463b79d12a2199e276fec",
+      "commit_date": "2025-11-05T16:36:48+0100",
+      "dirty": "false"
+    },
+    "name": "Renaissance Benchmark Suite",
+    "version": "0.16.1"
+  }
+}

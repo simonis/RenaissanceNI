@@ -2,20 +2,20 @@
 
 This repository provides some scripts for running a compatible subset of the  Renaissance benchmarks as Graal native images and compares the performance of OpenJDK's HotSpot JVM with various GraalVM and GraalVM Native Image configurations.
 
-The results for OpenJDK 25/27 and GraalVM 25.4.4.1.1 look as follows (click on the image for a larger version):
+The results for OpenJDK 25/27 and GraalVM 25.5.5-dev look as follows (click on the image for a larger version):
 
-[![Renaissance 0.16.1 with OpenJDK 25/27 and GraalVM 25.4.4](./output/results/2026-09-26-10-27-41/GraalVM_25.4.4.svg)](https://raw.githubusercontent.com/simonis/RenaissanceNI/refs/heads/main/output/results/2026-09-26-10-27-41/GraalVM_25.4.4.svg)
+[![Renaissance 0.16.1 with OpenJDK 25/27 and GraalVM 25.5.5-dev](./output/results/2026-10-18-14-41-35/Graal25.5.5-dev_G1-meta.svg)](https://raw.githubusercontent.com/simonis/RenaissanceNI/refs/heads/main/output/results/2026-10-18-14-41-35/Graal25.5.5-dev_G1-meta.svg)
 
 In this graph, the labels for the JVM implementation have the following meaning:
 - OpenJDK-25: plain OpenJDK 25 running with the default C2/G1 configuration
 - OpenJDK-27: plain OpenJDK 27 running with the default C2/G1 configuration
-- GraalCE-JIT: GraalVM 25.4.4.1.1 Community edition with the Graal JIT (i.e. "libgraal") running as high tier JIT and the default G1 collector.
+- GraalCE-JIT: GraalVM 25.5.5-dev Community edition with the Graal JIT (i.e. "libgraal") running as high tier JIT and the default G1 collector.
 - GraalEE-JIT: Oracle GraalVM 25.4.4.1.1 (formerly known as "Enterprise Edition) with the Graal JIT (i.e. "libgraal") running as high tier JIT and the default G1 collector.
-- GraalCE-NI-SERIAL: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with the default Serial GC).
-- GraalCE-NI-G1: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with the [development version of G1 GC](https://github.com/graalvm/labs-openjdk/tree/chaeubl/GR-77360)).
-- GraalCE-NI-SHEN-PASSIVE: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with a [development version of Shenandoah GC in stop-the-world mode (i.e. `-H:ShenandoahGCMode=passive`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
-- GraalCE-NI-SHEN-SATB: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with a [development version of Shenandoah GC in concurrent mode (i.e. `-H:ShenandoahGCMode=satb`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
-- GraalCE-NI-SHEN-Gen: Native image produced by the GraalVM 25.4.4.1.1 Community edition (running with a [development version of Shenandoah GC in generational mode (i.e. `-H:ShenandoahGCMode=generational`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
+- GraalCE-NI-SERIAL: Native image produced by the GraalVM 25.5.5-dev Community edition (running with the default Serial GC).
+- GraalCE-NI-G1: Native image produced by the GraalVM 25.5.5-dev Community edition (running with the [development version of G1 GC](https://github.com/graalvm/labs-openjdk/tree/chaeubl/GR-77360)).
+- GraalCE-NI-SHEN-PASSIVE: Native image produced by the GraalVM 25.5.5-dev Community edition (running with a [development version of Shenandoah GC in stop-the-world mode (i.e. `-H:ShenandoahGCMode=passive`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
+- GraalCE-NI-SHEN-SATB: Native image produced by the GraalVM 25.5.5-dev Community edition (running with a [development version of Shenandoah GC in concurrent mode (i.e. `-H:ShenandoahGCMode=satb`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
+- GraalCE-NI-SHEN-Gen: Native image produced by the GraalVM 25.5.5-dev Community edition (running with a [development version of Shenandoah GC in generational mode (i.e. `-H:ShenandoahGCMode=generational`))](https://github.com/simonis/labs-openjdk/tree/simonis/GR-77360-GenShen)).
 - GraalEE-NI-SERIAL: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with the default Serial GC and without automatic, ML-powered, profile guided optimizations (PGO), i.e. `-H:-MLProfileInference`).
 - GraalEE-NI-ML: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with the default Serial GC and automatic, Machine Learning powered, profile guided optimizations (PGO)).
 - GraalEE-NI-PGO: Native image produced by Oracle GraalVM 25.4.4.1.1 (running with the default Serial GC and explicit, profile guided optimizations (PGO), i.e. training run).
@@ -76,7 +76,7 @@ $ ./scripts/strip_results.sh ./output/results/ json ', "-XX:ActiveProcessorCount
 
 The second invocation is only required if you have use `FINAGLE_CHIRPER_MAX_CPUS` and the pattern should be adapted accordingly.
 
-Never versions of GraalVM Native Image also have a bug which prevents them from correctly exporting `-Dproperty=value` command line arguments through `RuntimeMXBean::getInputArguments()`. The `scripts/fix_results.sh` inserts the correct `-Dmode=<mode>` properties into the generated `.json` result files based on the corresponding directories they are saved in. This is necessary for the R scripts to correctly assign the results to the correct Native Image runs (e.g. `GraalCE-NI-SERIAL`, etc.):
+Never versions of GraalVM Native Image also [have a bug](https://github.com/oracle/graal/pull/14624) which prevents them from correctly exporting `-Dproperty=value` command line arguments through `RuntimeMXBean::getInputArguments()`. The `scripts/fix_results.sh` inserts the correct `-Dmode=<mode>` properties into the generated `.json` result files based on the corresponding directories they are saved in. This is necessary for the R scripts to correctly assign the results to the correct Native Image runs (e.g. `GraalCE-NI-SERIAL`, etc.):
 
 ```bash
 $ ./scripts/fix_results.sh ./output/results/
@@ -115,5 +115,5 @@ $ R
 # This will create a file 'stripe-jdk-<vm_jdk>.svg' in the current directory.
 > rren::plot_website_stripes(renaissance, warmup=180, labels="./output/results/labels_all.csv", \
                              palette='Paired', name='GraalVM_25.4.4.svg', \
-                             label_prefix='GraalVM 25.4.4.1.1\nm7i.8xlarge\n32vCPUs / 128gb\n-Xmx12g\n200sec / 20sec warmup'))
+                             label_prefix='GraalVM 25.5.5-dev\nm7i.8xlarge\n32vCPUs / 128gb\n-Xmx12g\n200sec / 20sec warmup'))
 ```
